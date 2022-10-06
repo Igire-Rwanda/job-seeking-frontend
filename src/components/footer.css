@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footerBar{
+    display: flex;
+    justify-content: space-around;
+    background-color: #63C49A;
+    height: 300px;
+    padding-top:2rem;
+}
+button{
+    padding: 10px 30px;
+    background-color: #FFD201;
+    border-radius: 30px;
+}
+input{
+    padding: 5px 30px;
+    border: 1px solid gray;
+   
+}
+h3{
+    font-weight: 700;
+}
+h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+.jobItem ul li{
+    padding: 8px;
+}
+@media (max-width:850px) {
+    h2{
+        font-size: 20px;
+    }
+}
+@media (max-width:680px) {
+    .footerBar{
+        display: inline-block;
+        height: 100%;
+        
+    }
+    h2{
+        font-size: 24px;
+    }
+}

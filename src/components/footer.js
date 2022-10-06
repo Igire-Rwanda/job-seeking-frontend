@@ -10,8 +10,8 @@ const  Footer = () => {
       <div className="footerBar" >
             <div>
                 <br/>
-              <h3 >Jolinker</h3> <nbsp/>
-              <p>Copyright@2022 Jolinker Inc </p> <br/>
+              <h3 >joLinker</h3> <nbsp/>
+              <p>Copyright@2022 joLinker Inc </p> <br/>
               <h2>Follow Us On</h2>
               <GitHubIcon/> <nbsp/><nbsp/><nbsp/>
               <InstagramIcon/><nbsp/><nbsp/>
@@ -23,7 +23,7 @@ const  Footer = () => {
                  <br/>
                 <ul>
                  <li> Hiring Tips</li>
-                 <li> TOp candidates</li> 
+                 <li> Top Candidates</li> 
                  <li> Recruiting and Hiring fast</li>
                  <li> Post a Job</li>
                 </ul>
@@ -32,9 +32,9 @@ const  Footer = () => {
                  <h2>Job Seekers</h2>
                  <br/>
                 <ul>
-                 <li> Find a hourly Jobs</li>
-                 <li> Easy apply</li>
-                 <li> get Interviewed</li>
+                 <li> Find an Hourly Jobs</li>
+                 <li> Easy Apply</li>
+                 <li> Get Interviewed</li>
                  <li> Job Advice Blog</li>
                 </ul>
             </div>

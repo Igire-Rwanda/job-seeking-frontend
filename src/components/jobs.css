@@ -1,0 +1,25 @@
+.JobTitles{
+    display: flex;
+    padding: 20px;
+
+   font-weight: 700;
+   color: black;
+}
+
+.btn{
+    padding: 6px 25px;
+    border-radius: 0px;
+    background-color:#44B4D2;
+}
+.jobCard{
+    margin: 30px;
+    width: 360px;
+    height: 320px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    box-shadow: 0 0 2px black;
+    padding: 20px;
+}
+.btn1{
+    background-color: gray;
+}

@@ -11,10 +11,19 @@
     height: 300px;
     padding-top:2rem;
 }
-button{
+.button{
     padding: 10px 30px;
     background-color: #FFD201;
     border-radius: 30px;
+}
+.jolinker{
+    padding-top: 40px;
+}
+.icon{
+    display: flex;
+    gap: 6px;
+   
+
 }
 input{
     padding: 5px 30px;

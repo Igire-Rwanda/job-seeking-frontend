@@ -5,8 +5,8 @@ import Footer from "./footer";
 const HomeLayout = (props) =>{
     return(
         <>
-        {/* <Navbar/> */}
-        <div style={{minHeight :"80vh"}}>{props.children}</div>
+        <Navbar />
+        <div style={{minHeight :"80vh",paddingTop:"72px"}}>{props.children}</div>
         <Footer/>
         </>
     )

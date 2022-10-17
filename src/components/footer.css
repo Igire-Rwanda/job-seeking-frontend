@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-around;
     background-color: #63C49A;
-    height: 300px;
+    /* height: 300px; */
     padding-top:2rem;
 }
 .button{
@@ -54,4 +54,15 @@ h2{
     h2{
         font-size: 24px;
     }
+}
+@media (max-width:890px) {
+    h2{
+        font-size: 18px;
+        
+    }
+    p{
+        font-size: 14px;
+        
+    }
+    
 }

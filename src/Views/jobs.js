@@ -3,8 +3,6 @@ import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
-import Nav from "../components/nav";
-import Data from "../components/Assets/Jobs.json";
 import "./jobs.css";
 import JobCards from "../components/jobCard";
 const filterOptions = createFilterOptions({
@@ -38,7 +36,7 @@ const top100Films = [
 const JobSearching = () => {
   return (
     <>
-    <Nav/>
+    {/* <Nav/> */}
     <div className="HomePage">
       <div className="JobTitles">
         <Autocomplete

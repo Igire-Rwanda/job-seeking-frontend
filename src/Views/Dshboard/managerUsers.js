@@ -13,9 +13,9 @@ const columns = [
     width: 90,
   },
   {
-    field: "fullName",
-    headerName: "Full name",
-    description: "This column has a value getter and is not sortable.",
+    field: "Position",
+    headerName: "Position",
+    description: "Software Engineers.",
     sortable: false,
     width: 160,
     valueGetter: (params) =>

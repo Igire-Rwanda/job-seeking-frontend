@@ -29,7 +29,7 @@ function App() {
     <Route path='/Userdash' element={<UserLayout/>}/>
     
     <Route path='/jobs' element={<JobSearching/>}/>
-    <Route path='/managerUser' element={<DataTable/>}/>
+   
    </Routes>
    </HomeLayout>
   

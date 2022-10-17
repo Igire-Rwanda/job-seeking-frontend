@@ -1,8 +1,7 @@
-
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import './App.css';
 import './index.css';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
 import AdminRoutes from './routes/admin';
 
@@ -15,12 +14,9 @@ import AdminRoutes from './routes/admin';
 
       <Router>
         <AdminRoutes></AdminRoutes>
+        {/* <Routes></Routes> */}
        </Router>
-       
-       {/* <Router>
-    <Routes></Routes>
-   
-</Router>   */}
+
 
         {/*  </Provider> */}
         </>

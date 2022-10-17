@@ -7,16 +7,19 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const  Footer = () => {
    return (
       <>
+      <div>
       <div className="footerBar" >
-            <div>
+            <div className="jolinker">
                 <br/>
               <h3 >joLinker</h3> <nbsp/>
               <p>Copyright@2022 joLinker Inc </p> <br/>
               <h2>Follow Us On</h2>
+              <div class="icon">
               <GitHubIcon/> <nbsp/><nbsp/><nbsp/>
               <InstagramIcon/><nbsp/><nbsp/>
               <GoogleIcon/><nbsp/><nbsp/>
               <LinkedInIcon/>
+              </div>
               </div>
               <div class='jobItem'>
                  <h2>Employers</h2>
@@ -41,8 +44,10 @@ const  Footer = () => {
             <div>
                 <h2>Subscribe to our NewsLetter</h2> <br/>
                 <input placeholder="Your Email"></input> <br/> <br/>
-                <button>Subscribe</button>
+                <button className="button">Subscribe</button>
             </div>
+            
+      </div>
       </div>
       </>
    )

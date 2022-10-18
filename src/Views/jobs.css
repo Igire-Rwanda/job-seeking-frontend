@@ -9,7 +9,7 @@
     justify-content: center;
    font-weight: 700;
    color: black;
-   margin: 30px;
+  
    
 }
 .siderB{
@@ -45,6 +45,9 @@ input{
 .Jobbutton{
     position: relative;
     left: 40%;
+} 
+.Jobbutton p{
+    margin-left: 10px;
 }
 .btn6{
     background-color: black;
@@ -82,7 +85,7 @@ input{
     left: 40%;
 }
 .btn3{
-    padding: 5px 48px;
+    padding: 5px 32px;
     background-color: #63C49A;
     border-radius: 20px;
 }

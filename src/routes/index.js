@@ -12,26 +12,27 @@ import DataTable from '../Views/Dshboard/managerUsers';
 //  import FindJobs from './pages/FindJobs';
 //  import HireTalent from './pages/HireTalent';
 import DashLayout from '../components/reusableComponents/Layout'
-
-
+import AdminLayout from "../Views/Dshboard/AdminDash"
+import JobCards from '../components/jobCard';
 
 
 function App() {
   return (
-  
-    <HomeLayout>
-   <Routes>
-   
+    <Routes>
+    
+        <Route exact path='/Admindash' element={<AdminLayout/>}/>
+        <Route exact path='/cards' element={<DashLayout><JobCards/></DashLayout>}/>
+        <Route path='/managerUser' element={<DataTable/>}/>
     {/* <Route path='/Home' element={<Home/>}/> */}
     {/* <Route path='/FindJobs' element={<FindJobs/>}/> */}
-    <Route exact path='/dashb' element={<DataTable/>}/>
+    
    
     <Route path='/Userdash' element={<UserLayout/>}/>
     
     <Route path='/jobs' element={<JobSearching/>}/>
-    <Route path='/managerUser' element={<DataTable/>}/>
+   
+  
    </Routes>
-   </HomeLayout>
   
     
   );

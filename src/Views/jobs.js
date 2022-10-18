@@ -5,6 +5,7 @@ import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import "./jobs.css";
 import JobCards from "../components/jobCard";
+import HomeLayout from "../components/homeLayout";
 const filterOptions = createFilterOptions({
   matchFrom: "start",
   stringify: (option) => option.title,
@@ -35,7 +36,7 @@ const top100Films = [
 ];
 const JobSearching = () => {
   return (
-    <>
+    <HomeLayout>
     {/* <Nav/> */}
     <div className="HomePage">
       <div className="JobTitles">
@@ -115,12 +116,12 @@ const JobSearching = () => {
       </div>
       <div className="JobsFooter">
         <div class="Jobbutton">
-          <p>Let Employers find you</p> <nbsp/>
+        <nbsp/><p>Let Employers find you</p> 
           <Button class="btn6">Upload Your Resume</Button>
         </div>
       </div>
       </div>
-    </>
+    </HomeLayout>
   );
 };
 export default JobSearching;

@@ -1,7 +1,8 @@
 import './App.css';
 import './index.css';
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import {  BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
 import AdminRoutes from './routes/admin';
 
@@ -11,13 +12,10 @@ import AdminRoutes from './routes/admin';
     return(
       <>
         {/*  <Provider store={store}> */}
-
-      <Router>
-        <AdminRoutes></AdminRoutes>
-        {/* <Routes></Routes> */}
+     <Router>
+            <Routes></Routes>
        </Router>
-
-
+ 
         {/*  </Provider> */}
         </>
         );
@@ -25,3 +23,5 @@ import AdminRoutes from './routes/admin';
     
 };
 export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);

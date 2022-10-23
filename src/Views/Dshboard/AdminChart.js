@@ -12,6 +12,7 @@ const AdminChart = () => (
         <Widgets type="Price" className="leftW" />
         <Widgets type="TotalEarning" />
       </div>
+      
       <div className="pie" style={{ display: "flex" }}>
         
         <div >

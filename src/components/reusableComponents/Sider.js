@@ -10,7 +10,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import StarBorder from "@mui/icons-material/StarBorder";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import ListItem from '@mui/material/ListItem';
-import { Button } from '@mui/material';
+import { Button,Chip } from '@mui/material';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ContactSupportIcon from '@mui/icons-material/ContactSupport';
@@ -67,7 +67,9 @@ export default function NestedList(props) {
       subheader={
         <ListSubheader component="div" id="nested-list-subheader"
         sx={{ display:'flex',justifyContent:'center', alignItems:'center',fontSize:'18px'}}>
-         Dashboard
+JoLinker <br/>
+
+         Admin Dashboard
         </ListSubheader>
       }
     > 
@@ -75,7 +77,7 @@ export default function NestedList(props) {
      selected={selectedIndex === index && true}
      onClick={() => {
         setSelectedIndex(index);
-        navigate (item.path);
+        navigate (<Chip>{item.path}</Chip>);
      }}
     >
         <ListItemIcon  sx={{ marginLeft:'24px',fontSize:'12px'}}>

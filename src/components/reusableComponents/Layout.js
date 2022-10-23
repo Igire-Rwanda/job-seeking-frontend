@@ -9,7 +9,7 @@ import Sider from "./Sider";
 const Comp = (props) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
+      <Grid container spacing={1}>
         <Grid item spacing={2} xs={12} sm={3}>
           <Sider  />
         </Grid>

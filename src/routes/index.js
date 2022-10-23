@@ -1,39 +1,32 @@
-
-
-
-import React from 'react';
-import { Routes,Route } from 'react-router-dom';
-//  import Home from './pages/Home';
-import JobSearching from '../Views/jobs';
-import HomeLayout from '../components/homeLayout';
-
-import UserLayout from '../Views/Dshboard/Userdashboard';
-import DataTable from '../Views/Dshboard/managerUsers';
-//  import FindJobs from './pages/FindJobs';
-//  import HireTalent from './pages/HireTalent';
-import DashLayout from '../components/reusableComponents/Layout'
-import AdminLayout from "../Views/Dshboard/AdminDash"
-import JobCards from '../components/jobCard';
-
-
+import React from "react";
+import { Routes, Route, Outlet } from "react-router-dom";
+import JobSearching from "../Views/jobs";
+import HomeLayout from "../components/homeLayout";
+import UserLayout from "../Views/Dshboard/Userdashboard";
+import DashLayout from "../components/reusableComponents/Layout";
+import JobCards from "../components/jobCard";
+import AdminChart from "../Views/Dshboard/AdminChart";
+import Adminroutes from "./admin";
+import Userroutes from "./user";
+import DataTable from "../Views/Dshboard/managerUsers";
 function App() {
   return (
+    
     <Routes>
-    
-        <Route exact path='/Admindash' element={<AdminLayout/>}/>
-        <Route exact path='/cards' element={<DashLayout><JobCards/></DashLayout>}/>
-        <Route path='/managerUser' element={<DataTable/>}/>
-    {/* <Route path='/Home' element={<Home/>}/> */}
-    {/* <Route path='/FindJobs' element={<FindJobs/>}/> */}
-    
-   
-    <Route path='/Userdash' element={<UserLayout/>}/>
-    
-    <Route path='/jobs' element={<JobSearching/>}/>
-   
-  
-   </Routes>
-  
+         <Route element={<Userroutes />}>
+      <Route exact path="/cards" element={<JobCards />} />
+        <Route path="/jobs" element={<JobSearching />} />
+      
+        </Route>
+        
+        <Route element={<Adminroutes />}>
+          <Route path="/managerUser" element={<DataTable />} />
+          <Route path="/Admindash" element={<AdminChart />} />
+          <Route path="/Userdash" element={<UserLayout />} />
+         
+        </Route>
+        
+    </Routes>
     
   );
 }

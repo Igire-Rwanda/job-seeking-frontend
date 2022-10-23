@@ -5,7 +5,7 @@ import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import "./jobs.css";
 import JobCards from "../components/jobCard";
-import HomeLayout from "../components/homeLayout";
+
 const filterOptions = createFilterOptions({
   matchFrom: "start",
   stringify: (option) => option.title,
@@ -36,9 +36,7 @@ const top100Films = [
 ];
 const JobSearching = () => {
   return (
-    <HomeLayout>
-    {/* <Nav/> */}
-    <div className="HomePage">
+    <div className="JobsPage">
       <div className="JobTitles">
         <Autocomplete
           id="filter-demo"
@@ -89,39 +87,35 @@ const JobSearching = () => {
       </div>
       <div class="center">
         <h5>
-          <span className="h1">Post your resume</span>_It only takes a moment
+          <span style={{ fontWeight: "bold" }}>Post your resume_</span>It only
+          takes a moment
         </h5>
         <h5>
-          {" "}
-          <span className="h1">Employers</span>:Post a Job Your next hire is
-          here
+          <span style={{ fontWeight: "bold" }}>Employers:</span>Post a Job Your
+          next hire is here
         </h5>
       </div>
-      <br />
-      <button class="btn2">Jobs Hiring Now</button>
-      {/* {JobSeekers.map((Data) = (
-              <div className="user">{Data} </div>
-      ))} */}
-      
-      <div className="JobsContent">
-        <JobCards />
-        <JobCards />
-        <JobCards />
-      </div>
-      <p className="h1 p1">Jobs based on your Activities</p>
-      <div className="JobsContent">
-        <JobCards />
-        <JobCards />
-        <JobCards />
-      </div>
-      <div className="JobsFooter">
-        <div class="Jobbutton">
-        <nbsp/><p>Let Employers find you</p> 
-          <Button class="btn6">Upload Your Resume</Button>
+
+      <div class="contentDivision">
+        <button class="btn2">Jobs Hiring Now</button>
+        <br />
+
+        <div className="JobsContent">
+          <JobCards />
+        </div>
+        <p className="h1 p1">Jobs based on your Activities</p>
+        <div className="JobsContent">
+          <JobCards />
+        </div>
+        <div className="JobsFooter">
+          <div class="Jobbutton">
+            <nbsp />
+            <p>Let Employers find you</p>
+            <Button class="btn6">Upload Your Resume</Button>
+          </div>
         </div>
       </div>
-      </div>
-    </HomeLayout>
+    </div>
   );
 };
 export default JobSearching;

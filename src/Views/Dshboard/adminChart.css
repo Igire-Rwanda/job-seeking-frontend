@@ -1,0 +1,17 @@
+.widgets{
+  display: flex;
+  padding: 10px;
+  gap:20px;
+  
+}
+.leftW{
+  background-color:blueviolet;
+  /* height:25rem;  */
+
+} 
+.h1{
+  color: black;
+  display: flex;
+  align-self: flex-start;
+  font-size: 24px;
+}

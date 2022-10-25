@@ -2,10 +2,11 @@ import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import JobCards from "../components/jobCard";
 import DashLayout from "../components/reusableComponents/Layout";
-import DataTable from "../Views/Dshboard/managerUsers";
-const Index = () => {
+
+
+const Index = (props) => {
   return (
-    <DashLayout>
+    <DashLayout >
       <Outlet>
       </Outlet>
     </DashLayout>

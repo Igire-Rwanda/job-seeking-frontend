@@ -6,13 +6,12 @@ const JobCards = () => {
       {jobs.map((data) => (
         
         <div className="jobCard">
-        <p className="new">new</p> 
+        <p className="new">New</p> <br/>
         <h1 className="title1">{data.Title}</h1>
         <h4 className="h4">{data.Company}</h4>
         <p className="h5">{data.Location}</p>
         <button className="Btn1 h5">{data.Timeline}</button>
-        <br />
-        <br />
+       
         <div className="siderA">
          {data.Description}
         </div>

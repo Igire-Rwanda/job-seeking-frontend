@@ -6,7 +6,7 @@ const HomeLayout = (props) =>{
     return(
         <>
         <Navbar />
-        <div style={{minHeight :"80vh",paddingTop:"36px"}}>{props.children}</div>
+        <div style={{width:"100%",minHeight :"80vh",paddingTop:"36px"}}>{props.children}</div>
         <Footer/>
         </>
     )

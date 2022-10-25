@@ -7,29 +7,30 @@ const Widgets = ({type}) => {
     
     let data;
 
+    // eslint-disable-next-line default-case
     switch (type){
         case "User":
        data={
-        title:"USERS",
+        title:"Clients",
         counter:"$471",
-        link: "See all users",
+        link: "See all clients",
         icon:<PersonIcon className="icon"/> ,
     
     };
     break;
     case "TotalOrder":
     data={
-        title:"INCOME",
+        title:"Talents",
         counter:"$529",
-        link: "See all Tours",
+        link: "See all Talents",
         icon:<PersonIcon className="icon"/> ,
     };
     break;
     case "Price":
     data={
-        title:"PRICES",
+        title:"Posts",
         counter:"$239",
-        link: "See all prices",
+        link: "See all jobPosts",
         icon:<MonetizationOnIcon className="icon"/> ,
     };
     break;
@@ -48,12 +49,11 @@ return(
             <span className='title'>{data.title}</span>
             <span className='counter'>{data.counter}</span>
             <span className='link'>{data.link}</span>
-            
             </div>
             <div className='right'>
             <div className='percentage positive'>
                 <KeyboardArrowUpIcon />
-                20%</div>
+                40%</div>
                 <span className='icon'>{data.icon}</span>    
             </div>
             </div>

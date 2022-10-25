@@ -5,6 +5,9 @@ import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import "./jobs.css";
 import JobCards from "../components/jobCard";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import FlashOnIcon from "@mui/icons-material/FlashOn";
+import WifiProtectedSetupIcon from "@mui/icons-material/WifiProtectedSetup";
 
 const filterOptions = createFilterOptions({
   matchFrom: "start",
@@ -36,8 +39,9 @@ const top100Films = [
 ];
 const JobSearching = () => {
   return (
-    <div className="JobsPage">
-      <div className="JobTitles">
+    <div className="JobsPage" >
+      
+      <div className="JobTitles" >
         <Autocomplete
           id="filter-demo"
           options={top100Films}
@@ -84,38 +88,84 @@ const JobSearching = () => {
         <Button variant="contained" class="btn">
           Find Jobs
         </Button>
-      </div>
-      <div class="center">
-        <h5>
+
+        <div class="center">
+        <p>
           <span style={{ fontWeight: "bold" }}>Post your resume_</span>It only
           takes a moment
-        </h5>
-        <h5>
+        </p>
+        <p>
           <span style={{ fontWeight: "bold" }}>Employers:</span>Post a Job Your
           next hire is here
-        </h5>
+        </p>
       </div>
-
+      </div>
+   <br/>
+   <br/>
       <div class="contentDivision">
+      
         <button class="btn2">Jobs Hiring Now</button>
+        
         <br />
-
+        <br/>
         <div className="JobsContent">
           <JobCards />
         </div>
-        <p className="h1 p1">Jobs based on your Activities</p>
+        <div className="paragr">
+        <p className="h1">Jobs based on your Activities</p>
+        </div>
+        
         <div className="JobsContent">
           <JobCards />
         </div>
-        <div className="JobsFooter">
+        <div className="paragr">
+        <p className="h1 ">Discover more great jobs</p>
+        <p >
+          Jobs matches based on your preferences
+        </p>
+        </div>
+       
+        <div className="carts">
+          <div class="cart">
+            <h3
+              style={{ color: "#44B4D2", fontWeight: "bold", fontSize: "20px" }}
+            >
+              <LocationOnIcon /> <nbsp />
+              In your Area
+            </h3>
+            <p>Jobs closest to you</p>
+          </div>
+          <div class="cart">
+            <h3
+              style={{ color: "#44B4D2", fontWeight: "bold", fontSize: "20px" }}
+            >
+              <WifiProtectedSetupIcon /> <nbsp />
+              Easly apply jobs
+            </h3>
+            <p>One-click apply using your profile</p>
+          </div>
+          <div className="cart">
+            <h3
+              style={{ color: "#44B4D2", fontWeight: "bold", fontSize: "20px" }}
+            >
+              <FlashOnIcon /> <nbsp />
+              Gig work
+            </h3>
+            <p>Design your own schedule</p>
+          </div>
+        </div>
+       
+      </div>
+      <div className="JobsFooter">
           <div class="Jobbutton">
-            <nbsp />
-            <p>Let Employers find you</p>
+            
+            <p style={{paddingLeft:"24px"}}>Let Employers find you</p>
             <Button class="btn6">Upload Your Resume</Button>
           </div>
         </div>
-      </div>
     </div>
+    
+    
   );
 };
 export default JobSearching;

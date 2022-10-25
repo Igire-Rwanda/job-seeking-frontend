@@ -10,7 +10,7 @@
      background-color: whitesmoke;
      width: 30rem;
      margin-bottom: 20px;
-     
+     background-color: #63c49a;
 }
 .left,.right{
     display: flex;
@@ -22,16 +22,18 @@
 .title{
 
     font-weight: bold;
-    font-size: 14px;
-    color: rgba(137, 24, 24, 0.845);
+    font-size: 18px;
+    
 }
 .counter{
     font-weight: 400;
     font-size: 28px;
+    
 }
 .link{
     font-size: 10px;
     font-weight: 600;
+    
 }
 .percentage,.positive{
     display: flex;
@@ -39,12 +41,12 @@
     justify-content: space-between;
 }
  .positive{
-        color: red;
+    color: #ffd201;
     }
 .icon{
     /* width: 36px; */
      /* padding: 5px;  */
-    background-color: rgba(184, 27, 161, 0.495);
     border-radius: 5px;
     align-self: flex-end;
+    
 }

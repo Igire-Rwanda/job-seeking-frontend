@@ -95,13 +95,13 @@ const JobSearching = () => {
         <div className="JobsContent">
           <JobCards />
         </div>
-        <div style={{padding:"30px"}}>
-        <p className="h1 p1">Jobs based on your Activities</p>
+        <div style={{padding:"30px 0"}}>
+        <p className=" p1">Jobs based on your Activities</p>
         </div>
         <div className="JobsContent">
           <JobCards />
         </div>
-        <div style={{padding:"30px"}}>
+        <div style={{padding:"30px 0"}}>
         <p className="h1 p1">Discover more great jobs</p>
         <p>
           Jobs matches based on your preferences

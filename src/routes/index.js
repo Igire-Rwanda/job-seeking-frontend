@@ -6,17 +6,23 @@ import UserLayout from "../Views/Dshboard/Userdashboard";
 import DashLayout from "../components/reusableComponents/Layout";
 import JobCards from "../components/jobCard";
 import AdminChart from "../Views/Dshboard/AdminChart";
+
 import Adminroutes from "./admin";
 import Userroutes from "./user1";
 import DataTable from "../Views/Dshboard/managerUsers";
 import JobSeeker from "../Views/Dshboard/jobSeekerDash";
+import UserAroutes from "./user";
 function App() {
   return (
     <Routes>
       <Route element={<Userroutes />}>
+    
+        <Route path="/jobseeker" element={<JobSeeker />} />
+      </Route>
+      <Route element={<UserAroutes />}>
         
         <Route path="/jobs" element={<JobSearching />} />
-        <Route path="/jobseeker" element={<JobSeeker />} />
+        
       </Route>
       
       <Route element={<Adminroutes />}>
@@ -24,6 +30,7 @@ function App() {
         <Route path="/Admindash" element={<AdminChart />} />
         <Route path="/Userdash" element={<UserLayout />} />
         <Route exact path="/cards" element={<JobCards />} />
+        
       </Route>
     </Routes>
   );

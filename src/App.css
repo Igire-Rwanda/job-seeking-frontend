@@ -47,6 +47,7 @@ body{
   margin-left: 2rem;
   border-radius: 0.5rem;
   color: #fff;
+
 }
 label{
   position: absolute;
@@ -108,3 +109,4 @@ h6{
   position: absolute;
   padding-left: 4rem;
 }
+

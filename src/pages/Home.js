@@ -12,14 +12,16 @@ const Home = () => {
   const getJob = (k) =>{
     setJob(k.target.value)
   }
+
   return (
     
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <div > 
   <img className='max-w-md h-96 mr-12' src={bgImg}/>
 </div>
       <div className='home'><div className='pt-20 pl-20 font-bold	text-2xl	'>
+
 It's Easy To Find 
  <div>Your <span className='text-teal-500' >Dream Job</span></div> 
 </div>
@@ -96,11 +98,11 @@ It's Easy To Find
 {/* <EmployerDashboard/> */}
 
 
+
     </div>
     
   )
 }
 
 export default Home
-
 

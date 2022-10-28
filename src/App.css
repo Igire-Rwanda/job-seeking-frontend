@@ -48,3 +48,63 @@ body{
   border-radius: 0.5rem;
   color: #fff;
 }
+label{
+  position: absolute;
+  left: 7.2rem;
+  /* bottom: 18.2rem; */
+}
+select{
+  outline: none;
+}
+h1{
+  position: absolute;
+  left: 18.5rem;
+  
+}
+.home{
+  margin-top: 5rem;
+}
+.icon1{
+  background-color: rgb(14,165,233);
+  width: 5rem;
+  height: 5rem;
+  padding: 2rem;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  border-radius: 0.4rem;
+  margin-bottom: 3rem;
+}
+.icon2{
+  width: 5rem;
+  height: 5rem;
+  padding: 2rem;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  border-radius: 0.4rem;
+  margin-bottom: 3rem;
+  background-color: rgb(250,204,21);
+}
+.icon3{
+  width: 5rem;
+  height: 5rem;
+  padding: 2rem;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  border-radius: 0.4rem;
+  margin-bottom: 3rem;
+  background-color: rgb(20,184,166);
+}
+img{
+  margin-top:3rem ;
+  float: right;
+  /* padding-top:2rem; */
+}
+h5{
+  /* position: relative; */
+  padding-left: 4rem;
+  padding-bottom: -10rem;
+}
+h6{
+  position: absolute;
+  padding-left: 4rem;
+}

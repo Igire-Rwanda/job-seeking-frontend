@@ -117,8 +117,15 @@ input {
 }
 .center {
   position: absolute;
-  top: 40%;
+  top: 36%;
   left: 35%;
+}
+.p1{
+  font-size: 18px;
+  font-weight: bold;
+  width: 340px;
+  padding: 5px 10px;
+  border: 1px solid black;
 }
 .btn3 {
   padding: 5px 32px;
@@ -126,7 +133,10 @@ input {
   border-radius: 20px;
   border: 2px solid #63c49a;
 }
-
+.IconBtn{
+  padding: 3px 24px;
+ 
+}
 .btn1 {
   background-color: gray;
 }

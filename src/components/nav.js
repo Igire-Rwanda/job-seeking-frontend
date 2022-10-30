@@ -36,7 +36,7 @@ const Nav = () => {
 
   return (
     <div>
-<nav className='shadow-md w-full fixed top-0 left-0'>
+<nav className='shadow-md w-full  top-0 left-0'>
       <div className='md:flex bg-white py-4 items-cennter justify-between md:px-20'>
          <div className='font-bold text-2xl cursor-pointer flex items-center font-[poppins] text-gray-800'>
            <span className='text-3xl text-indigo-600 mr-1 pt-2'>

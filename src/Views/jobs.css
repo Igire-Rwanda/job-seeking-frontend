@@ -9,7 +9,7 @@
   gap: 20px;
   justify-content: center;
   color: black;
-  padding: 40px;
+  padding: 20px;
 }
 .JobsContent{
     display: flex;
@@ -128,7 +128,7 @@ input {
   border: 1px solid black;
 }
 .btn3 {
-  padding: 5px 32px;
+  padding: 5px 24px;
   background-color: #63c49a;
   border-radius: 20px;
   border: 2px solid #63c49a;
@@ -152,7 +152,7 @@ input {
   padding-bottom: 20px;
 }
 .contentDivision {
-  padding: 60px;
+  padding: 0px 60px 60px 60px;
 }
 .paragr {
   /* margin-left: 80px; */

@@ -1,0 +1,22 @@
+.contactTitle{
+    font-size: 32px;
+    color:#63c49a ;
+    font-weight: 700;
+}
+.paragraphContact{
+    font-size: 20px;
+}
+.btn7 {
+    width: 120px;
+    padding: 6px auto;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    margin-left: 46px;
+}
+.spany{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 6px;
+    text-transform: uppercase;
+}

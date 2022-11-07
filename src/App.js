@@ -1,3 +1,4 @@
+
 import './App.css';
 import Navbar from './components/Navbar';
 import SignUp from './components/SignUp';
@@ -6,6 +7,7 @@ import UserProfile from './components/UserProfile';
 // import Employer from '.components/Employer';
 // import {useEffect} from 'react'
 // import google from 'react'
+
 
 
 function App() {
@@ -26,5 +28,6 @@ function App() {
 
 
 export default App;
+
 
 

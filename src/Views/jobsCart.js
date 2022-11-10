@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -28,7 +28,7 @@ const countries = [
   { code: "Ta", label: "Tanzania", phone: "255" },
   { code: "AT", label: "Austria", phone: "43" },
 ];
-const top100Films = [
+const JobCategories = [
   { title: "Software Developer", year: 1994 },
   { title: "Full Stack Engineer", year: 1972 },
   { title: "Electrical Engineer", year: 1974 },
@@ -38,13 +38,14 @@ const top100Films = [
   { title: "Architecture and Construction", year: 1994 },
 ];
 const JobSearching = () => {
+  
   return (
     <div className="JobsPage" >
       
       <div className="JobTitles" >
         <Autocomplete
           id="filter-demo"
-          options={top100Films}
+          options={JobCategories}
           getOptionLabel={(option) => option.title}
           filterOptions={filterOptions}
           sx={{ width: 300 }}

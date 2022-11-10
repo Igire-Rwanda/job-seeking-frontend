@@ -13,6 +13,7 @@ import UserAroutes from "./user";
 import User1routes from "./user1";
 import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
+import PostAJob from "../Views/postAjob";
 function App() {
   return (
     <Routes>
@@ -20,6 +21,8 @@ function App() {
       <Route path="/contactUs" element={<ContactUS />} />
         <Route path="/jobs" element={<JobSearching />} />
         <Route path="/aboutUs" element={<AboutUs />} />
+        <Route exact path="/post" element={<PostAJob />} />
+        <Route exact path="/cards" element={<JobCards />} />
       </Route>
       <Route element={<User1routes />}>
       

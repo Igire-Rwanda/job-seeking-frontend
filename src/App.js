@@ -4,21 +4,21 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
-import AdminRoutes from "./routes/admin";
 
-// import { Provider } from "react-redux";
-// import store from "./redux/stores";
+//redux
+import { Provider } from "react-redux";
+import store from "./redux";
 
 function App() {
   return (
     <>
-      {/*  <Provider store={store}> */}
+       <Provider store={store}>
       <Router>
         <Routes></Routes>
-        {/* <AdminRoutes></AdminRoutes> */}
+        
       </Router>
 
-      {/*  </Provider> */}
+       </Provider>
     </>
   );
 }

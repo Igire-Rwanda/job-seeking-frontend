@@ -1,9 +1,29 @@
-import React from "react";
+import React ,{useEffect}from "react";
 import jobs from './Assets/Jobs.json';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+
+
+import { useDispatch, useSelector } from "react-redux";
+
+import { getAllJobPostAction } from "../redux/jobPost/actions";
+
 const JobCards = () => {
+  const dispatch = useDispatch();
+// const {jobs,isFetching} = useSelector((state)=>state.jobPosts)
+
+  useEffect(() => {
+    getAllJobPostAction()(dispatch);
+  }, []);
+
+
   return (
     <>
+     <Card sx={{ maxWidth: 375 }}>
+      <CardContent>
       {jobs.map((data) => (
         
         <div className="jobCard">
@@ -27,28 +47,11 @@ const JobCards = () => {
 
         ))}
         
-      {/* <div className="jobCard">
-        <p className="new">new</p> 
-        <h1 className="title1">SOFTWARE DEVELOPMENT ENGINEER I</h1>
-        <h4 className="h4">Amazon.com Services LLc</h4>
-        <p className="h5">Remote</p>
-        <button className="Btn1 h5">Full Time</button>
-        <br />
-        <br />
-        <div className="siderA">
-          <p>Hiring Multiple Candidates</p>
-          <p>
-            It's not the secret that Amazon relies on its technology to deliver
-            million of packages everyday to it's customers - everyday- at a low
-            cost.
-          </p>
-        </div>
-        <br />
-        <div className="siderB">
-          <button className="btn3">INFO</button>
-          <button className="btn3">APPLY</button>
-        </div>
-      </div> */}
+      </CardContent>
+     </Card>
+   
+     <br/>
+     
     </>
   );
 };

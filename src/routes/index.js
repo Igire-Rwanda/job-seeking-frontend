@@ -13,6 +13,8 @@ import UserAroutes from "./user";
 import User1routes from "./user1";
 import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
+import SignIn from "../components/Signin";
+import SignUp from "../components/SignUp";
 function App() {
   return (
     <Routes>
@@ -20,6 +22,9 @@ function App() {
       <Route path="/contactUs" element={<ContactUS />} />
         <Route path="/jobs" element={<JobSearching />} />
         <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/login" element={<SignIn/>} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/" element={<SignUp />} />
       </Route>
       <Route element={<User1routes />}>
       

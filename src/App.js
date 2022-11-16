@@ -1,33 +1,32 @@
+import "./App.css";
+import "./index.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "./routes";
 
-import './App.css';
-import Navbar from './components/Navbar';
-import SignUp from './components/SignUp';
-import SignIn from './components/Signin';
-import UserProfile from './components/UserProfile';
-// import Employer from '.components/Employer';
-// import {useEffect} from 'react'
-// import google from 'react'
-
-
+//redux
+//import { Provider } from "react-redux";
+//import store from "./redux";
 
 function App() {
 
  
 
   return (
-    <div className="App">
-       {/* <Navbar/> */}
-      {/* <SignIn/>  */}
-     
-      <UserProfile/>
-    
+    <>
+       {/* <Provider > */}
+      <Router>
+        <Routes></Routes>
+        
+      </Router>
 
-    </div>
+       {/* </Provider> */}
+    </>
   );
 }
 
 
 export default App;
-
-
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);

@@ -42,9 +42,11 @@ const Footer = () => {
               </ul>
             </div>
             <div>
+
               <h2>Subscribe to our NewsLetter</h2> <br />
               <input placeholder="Your Email"></input> <br /> <br />
               <button className="button">Subscribe</button>
+
             </div>
           </div>
           <div class="ligne"></div>

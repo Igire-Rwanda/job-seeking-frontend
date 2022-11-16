@@ -1,27 +1,33 @@
-import "./App.css";
-import "./index.css";
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router } from "react-router-dom";
-import Routes from "./routes";
-import AdminRoutes from "./routes/admin";
 
-// import { Provider } from "react-redux";
-// import store from "./redux/stores";
+import './App.css';
+import Navbar from './components/Navbar';
+import SignUp from './components/SignUp';
+import SignIn from './components/Signin';
+import UserProfile from './components/UserProfile';
+// import Employer from '.components/Employer';
+// import {useEffect} from 'react'
+// import google from 'react'
+
+
 
 function App() {
-  return (
-    <>
-      {/*  <Provider store={store}> */}
-      <Router>
-        <Routes></Routes>
-        {/* <AdminRoutes></AdminRoutes> */}
-      </Router>
 
-      {/*  </Provider> */}
-    </>
+ 
+
+  return (
+    <div className="App">
+       {/* <Navbar/> */}
+      {/* <SignIn/>  */}
+     
+      <UserProfile/>
+    
+
+    </div>
   );
 }
+
+
 export default App;
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+
+
+

@@ -1,0 +1,22 @@
+*{
+    font-family:Montserrat ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+
+}
+:root{
+    --main-color:#647bff;
+    --body-color:#E5E4E2;
+    --container-color:#0a0a0a;
+    --heading-color:#222331;
+    --box-color:#0d0f26;
+    --bg-color:#E5E4E2;
+
+}
+body{
+    color: var(--bg-color);
+    background:var(--body-color)
+}

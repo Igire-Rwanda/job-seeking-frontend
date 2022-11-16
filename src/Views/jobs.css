@@ -9,7 +9,7 @@
   gap: 20px;
   justify-content: center;
   color: black;
-  padding: 40px;
+  padding: 20px;
 }
 .JobsContent{
     display: flex;
@@ -77,7 +77,7 @@ input {
 .new {
   width: 60px;
   text-align: center;
-  background-color: #ccc;
+  background-color: C;
   color: rgb(28, 28, 120);
   /* margin-bottom: 4px; */
 }
@@ -117,16 +117,26 @@ input {
 }
 .center {
   position: absolute;
-  top: 40%;
+  top: 36%;
   left: 35%;
 }
+.p1{
+  font-size: 18px;
+  font-weight: bold;
+  width: 340px;
+  padding: 5px 10px;
+  border: 1px solid black;
+}
 .btn3 {
-  padding: 5px 32px;
+  padding: 5px 24px;
   background-color: #63c49a;
   border-radius: 20px;
   border: 2px solid #63c49a;
 }
-
+.IconBtn{
+  padding: 3px 24px;
+ 
+}
 .btn1 {
   background-color: gray;
 }
@@ -142,7 +152,7 @@ input {
   padding-bottom: 20px;
 }
 .contentDivision {
-  padding: 60px;
+  padding: 0px 60px 60px 60px;
 }
 .paragr {
   /* margin-left: 80px; */

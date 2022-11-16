@@ -1,5 +1,6 @@
 import React from "react";
 import jobs from './Assets/Jobs.json';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 const JobCards = () => {
   return (
     <>
@@ -17,8 +18,10 @@ const JobCards = () => {
         </div>
         <br />
         <div className="siderB">
-          <button className="btn3">INFO</button>
-          <button className="btn3">APPLY</button>
+          <button className="btn3">APPLY ON COMPANY SITE</button>
+          <div className="IconBtn">
+          <FavoriteBorderIcon />
+          </div>
         </div>
       </div>
 

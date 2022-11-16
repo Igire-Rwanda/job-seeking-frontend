@@ -88,7 +88,7 @@ const JobSearching = () => {
         <Button variant="contained" class="btn">
           Find Jobs
         </Button>
-
+        
         <div class="center">
         <p>
           <span style={{ fontWeight: "bold" }}>Post your resume_</span>It only

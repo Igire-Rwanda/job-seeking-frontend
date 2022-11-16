@@ -6,24 +6,27 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
-import AdminRoutes from "./routes/admin";
 
-// import { Provider } from "react-redux";
-// import store from "./redux/stores";
+//redux
+//import { Provider } from "react-redux";
+//import store from "./redux";
 
 
 
 
 function App() {
+
+ 
+
   return (
     <>
-      {/*  <Provider store={store}> */}
+       {/* <Provider > */}
       <Router>
         <Routes></Routes>
-        {/* <AdminRoutes></AdminRoutes> */}
+        
       </Router>
 
-      {/*  </Provider> */}
+       {/* </Provider> */}
     </>
   //   <BrowserRouter>
   //  <Routes>
@@ -40,6 +43,8 @@ function App() {
     
   );
 }
+
+
 export default App;
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);

@@ -9,7 +9,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import StarBorder from "@mui/icons-material/StarBorder";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import ListItem from "@mui/material/ListItem";
-import { Button, Chip } from "@mui/material";
+import { Button, Chip, Divider } from "@mui/material";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
@@ -51,12 +51,14 @@ export default function NestedList(props) {
   };
 
   return (
+    <>
     <List
       sx={{
-        width: "100%",
+        width: "300px",
         maxWidth: 360,
         bgcolor: "whitesmoke",
         minHeight: ["0vh", "100vh"],
+        position:"fixed"
       }}
       component="nav"
       aria-labelledby="nested-list-subheader"
@@ -90,14 +92,13 @@ export default function NestedList(props) {
           <ListItemText primary={item.name} sx={{ fontSize: "12px" }} />
         </ListItemButton>
       ))}
-
-      <List>
+  <List>
         <ListItemButton
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            margin: "20px",
+          
           }}
         >
           <Box
@@ -105,7 +106,7 @@ export default function NestedList(props) {
               width: "140px",
               height: "40px",
               fontSize: "18px",
-              bgcolor: "#44B4D2",
+              bgcolor: "black",
               color: "white",
               padding: " 8px",
               textAlign: "center",
@@ -116,6 +117,10 @@ export default function NestedList(props) {
           </Box>
         </ListItemButton>
       </List>
+ 
     </List>
+    <Divider/>
+       
+    </>
   );
 }

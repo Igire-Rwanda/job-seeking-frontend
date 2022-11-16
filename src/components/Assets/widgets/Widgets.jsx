@@ -12,7 +12,7 @@ const Widgets = ({type}) => {
         case "User":
        data={
         title:"Clients",
-        counter:"$471",
+        counter:"471",
         link: "See all clients",
         icon:<PersonIcon className="icon"/> ,
     
@@ -21,7 +21,7 @@ const Widgets = ({type}) => {
     case "TotalOrder":
     data={
         title:"Talents",
-        counter:"$529",
+        counter:"529",
         link: "See all Talents",
         icon:<PersonIcon className="icon"/> ,
     };
@@ -29,16 +29,16 @@ const Widgets = ({type}) => {
     case "Price":
     data={
         title:"Posts",
-        counter:"$239",
+        counter:"239",
         link: "See all jobPosts",
         icon:<MonetizationOnIcon className="icon"/> ,
     };
     break;
-    case "TotalEarning":
+    case "Revenue":
     data={
-        title:"Earnings",
+        title:"Revenue",
         counter:"$2879",
-        link: "See all earnings",
+        link: "See all revenue",
         icon:<MonetizationOnIcon className="icon"/> ,
     };
 }

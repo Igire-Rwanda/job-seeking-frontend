@@ -6,6 +6,7 @@ import DashLayout from "../components/reusableComponents/Layout";
 import JobCards from "../components/jobCard";
 import AdminChart from "../Views/Dshboard/AdminChart";
 import Adminroutes from "./admin";
+<<<<<<< HEAD
 import Userroutes from "./user";
 import DataTable from "../Views/Dshboard/managerUsers";
 import JobSeeker from "../Views/Dshboard/jobSeekerDash";
@@ -23,12 +24,23 @@ import JobDescription from '../components/JobDescription';
 import Jobs from '../pages/Jobs';
 import Candidates from '../pages/Candidates';
 import Billing from '../pages/Billing';
+=======
+import DataTable from "../Views/Dshboard/managerUsers";
+import JobSeeker from "../Views/Dshboard/jobSeekerDash";
+import UserAroutes from "./user";
+import User1routes from "./user1";
+import AboutUs from "../Views/aboutUs";
+import ContactUS from "../Views/contactUs";
+import SignIn from "../components/Signin";
+import SignUp from "../components/SignUp";
+>>>>>>> f2136ddc8f800e2fc4d8afc3b6bde7da2c408d14
 function App() {
   return (
     <Routes>
-      <Route element={<Userroutes />}>
-        
+      <Route element={<UserAroutes />}>
+      <Route path="/contactUs" element={<ContactUS />} />
         <Route path="/jobs" element={<JobSearching />} />
+<<<<<<< HEAD
         <Route path="/jobseeker" element={<JobSeeker />} />
         <Route exact path='/' element={<Home/>}/>
 
@@ -47,6 +59,16 @@ function App() {
 <Route path='/Jobs' element={<Jobs/>}/>
 <Route path='/Candidates' element={<Candidates/>}/>
 <Route path='/Billing' element={<Billing/>}/>
+=======
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/login" element={<SignIn/>} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/" element={<SignUp />} />
+      </Route>
+      <Route element={<User1routes />}>
+      
+      <Route path="/jobseeker" element={<JobSeeker />} />
+>>>>>>> f2136ddc8f800e2fc4d8afc3b6bde7da2c408d14
       </Route>
       
       <Route element={<Adminroutes />}>
@@ -54,6 +76,7 @@ function App() {
         <Route path="/Admindash" element={<AdminChart />} />
         <Route path="/Userdash" element={<UserLayout />} />
         <Route exact path="/cards" element={<JobCards />} />
+        
       </Route>
     </Routes>
   );

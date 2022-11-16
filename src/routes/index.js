@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import JobSearching from "../Views/jobsCart";
-import HomeLayout from "../components/homeLayout";
 import UserLayout from "../Views/Dshboard/Userdashboard";
 import DashLayout from "../components/reusableComponents/Layout";
 import JobCards from "../components/jobCard";
@@ -10,20 +9,20 @@ import Adminroutes from "./admin";
 import Userroutes from "./user";
 import DataTable from "../Views/Dshboard/managerUsers";
 import JobSeeker from "../Views/Dshboard/jobSeekerDash";
-import Home from './pages/Home';
-import Navbar from './components/Navbar';
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
-import Footer from './components/Footer';
-import FindJobs from './pages/FindJobs';
-import HireTalent from './pages/HireTalent';
-import HomeLayout from './components/HomeLayout';
-import PostJob from './components/PostJob';
-import JobDetails from './components/JobDetails';
-import JobDescription from './components/JobDescription';
-import Jobs from './pages/Jobs';
-import Candidates from './pages/Candidates';
-import Billing from './pages/Billing';
+import Home from '../pages/Home';
+import Navbar from '../components/Navbar';
+import SignIn from '../pages/SignIn';
+import SignUp from '../pages/SignUp';
+import Footer from '../components/footer';
+import FindJobs from '../pages/FindJobs';
+import HireTalent from '../pages/HireTalent';
+// import HomeLayout from './components/HomeLayout';
+import PostJob from '../components/PostJob';
+import JobDetails from '../components/JobDetails';
+import JobDescription from '../components/JobDescription';
+import Jobs from '../pages/Jobs';
+import Candidates from '../pages/Candidates';
+import Billing from '../pages/Billing';
 function App() {
   return (
     <Routes>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Footer from '../components/footer'
 import bgImg from '../img/picc.png'
 import icon from '../img/user.png'
 

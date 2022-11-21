@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@fontsource/roboto": "^4.5.8",
     "@googlemaps/react-wrapper": "^1.1.35",
     "@mui/icons-material": "^5.10.6",
-    "@mui/material": "^5.10.8",
+    "@mui/material": "^5.10.14",
     "@mui/styled-engine-sc": "^5.10.6",
     "@mui/x-data-grid": "^5.17.8",
     "@mui/x-data-grid-generator": "^5.17.11",
@@ -28,10 +28,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node node_modules/react-scripts/scripts/start.js",
+    "build": "node node_modules/react-scripts/scripts/build.js",
+    "test": "node node_modules/react-scripts/scripts/test.js",
+    "eject": "node node_modules/react-scripts/scripts/eject.js"
   },
   "eslintConfig": {
     "extends": [

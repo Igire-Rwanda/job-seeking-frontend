@@ -1,47 +1,135 @@
-import React from 'react';
+import React, { useState } from "react";
+import {
+  Container,
+  Grid,
+  Card,
+  TextField,
+  Stack,
+  Button,
+  InputLabel,
+  FilledInput,
+  InputAdornment,
+  IconButton,
+  FormControl,
+} from "@mui/material";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import Link from '@mui/material/Link';
+const styles = { width: "100%", height: "100vh" };
+const FormData = () => {
+  const [Email, setEmail] = useState();
+  // const login =()=>{
+  //   loginAction({email,password})(dispatch);
+  // }
+  const [values, setValues] = React.useState({
+    password: "",
+    showPassword: false,
+  });
 
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
 
-export default function Signin() {
+  const handleClickShowPassword = () => {
+    setValues({
+      ...values,
+      showPassword: !values.showPassword,
+    });
+  };
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
   return (
-  
-    <div className=" flex flex-col justify-center">
-      <form className='max-w-[400px] w-full mx-auto bg-blue-800 p-8 px-8 rounded-lg'>
+    <>
+      <Container sx={styles}>
+        <Grid
+          sx={styles}
+          container
+          spacing={6}
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid item sm={3} xs={0}></Grid>
+          <Grid item sm={6} xs={12}>
+            <Card sx={{ height: 420, padding: 3 }}>
+              <Stack spacing={4} alignItems="center" justifyContent="center">
+                <div className=" md:pl-0 pl-9 font-bold text-2xl cursor-pointer flex items-center font-[poppins] text-gray-800">
+                  <span className="text-teal-500 mr-1 ">joLinker</span>
+                </div>
 
-      <h2 className='text-4xl text:text-blue font-bold text-center'>SIGN IN</h2>
+                <TextField
+                  fullWidth
+                  id="filled-basic"
+                  label="Email"
+                  variant="filled"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
 
-      <div className='flex flex-col text-white-400 py-2'>
-      <label> User Name</label>
-      <input className=" p-2 rounded-lg bg-white-700 mt-2 p-2 focus:border-blue-500 focus:bg-teal-500 focus:outline-none "type="text"/>
-      </div>
-
-      <div className='flex flex-col text-gray-400 py-2'>
-      <label> Password</label>
-      <input  className=" p-2 rounded-lg bg-white-700 mt-2 p-2 focus:border-blue-500 focus:bg-teal-500 focus:outline-none "type="password"/>
-      </div>
-
-       {/* <div className='mt-10 grid grid-cols-3 items-center text-gray-400'>
-        <hr className='border-gray-400'> </hr>
-        <p className='text-center'>OR</p>
-        <hr className='border-gray-400'> </hr>
-        </div> 
-                              */}
-      <div className='flex justify-between text-gray-400 py-2'>
-        <p className='flex items-center'>
-     <input className='mr-2' type="checkbox"/>Remember Me
-     </p>
-     <p> Forgot Password</p>
-      </div>
-
-      {/* <div className='flex justify-between text-gray-400 py-2'>
-        <p className='flex items-center'> 
-     <input className='mr-2' type="radio"/> Hired
-     </p>
-     </div> */}
-
-      <button className='w-full my-5 py-2 bg-teal-500'> SIGN IN</button>
-      </form>
-     </div>
-     
-  )
-}
+                <FormControl sx={{ m: 1 }} fullWidth variant="filled">
+                  <InputLabel htmlFor="outlined-adornment-password">
+                    Password
+                  </InputLabel>
+                  <FilledInput
+                    id="outlined-adornment-password"
+                    type={values.showPassword ? "text" : "password"}
+                    value={values.password}
+                    onChange={handleChange("password")}
+                    endAdornment={
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={handleClickShowPassword}
+                          onMouseDown={handleMouseDownPassword}
+                          edge="end"
+                        >
+                          {values.showPassword ? (
+                            <VisibilityOff />
+                          ) : (
+                            <Visibility />
+                          )
+                        }
+                        </IconButton>
+                      </InputAdornment>
+                    }
+                    label="Password"
+                  />
+                </FormControl>
+                {/* <TextField
+                  fullWidth
+                  id="standard-basic"
+                  label="Forgot Password"
+                  variant="standard"
+                  sx={{ textAlign: "end" }}
+                /> */}
+                 <Link
+      component="button"
+      variant="body2"
+      onClick={() => {
+        console.info("I'm a button.");
+      }}
+    >
+      Forgot password?
+    </Link>
+                <Button
+                  fullWidth
+                  variant="contained"
+                  // onClick={() => {
+                  //   // navigate("/dashboard");
+                  //   login();
+                  // }}
+                >
+                  Signin
+                </Button>
+              </Stack>
+            </Card>
+          </Grid>
+          <Grid item sm={3} xs={0}></Grid>
+        </Grid>
+      </Container>
+    </>
+  );
+};
+export default FormData
 

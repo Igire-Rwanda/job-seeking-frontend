@@ -16,10 +16,11 @@ import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import { Box } from "@mui/system";
 const adminItems = [
   { name: "Dashboard overview", icon: <StarBorder />, path: "/Admindash" },
-  { name: "Manage Users", icon: <InboxIcon />, path: "/managerUser" },
-  { name: "Manage Candidates", icon: <PeopleAltIcon />, path: "/cards" },
+  { name: "Manage Users", icon: <InboxIcon />, path: "/Button" },
+  { name: "Manage Employers", icon: <InboxIcon />, path: "/Button" },
   { name: "Manage Posts", icon: <DraftsIcon />, path: "/jobseeker" },
-  { name: "Manage Employers", icon: <InboxIcon />, path: "/managerUser" },
+  { name: "Manage Candidates", icon: <PeopleAltIcon />, path: "/cards" },
+  { name: "Delete", icon: <PeopleAltIcon />, path: "/Button" },
   { name: "Settings", icon: <SettingsIcon /> },
   { name: "Help", icon: <ContactSupportIcon /> },
 ];

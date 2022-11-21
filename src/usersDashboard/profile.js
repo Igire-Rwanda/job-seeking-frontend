@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -19,25 +19,25 @@ export default function Profile() {
 
   
 
-  const currencies = [
+  const degree = [
     {
-      value: 'Level of education',
+      value: 'high school',
       label: 'High school diploma',
     },
     {
-      value: 'Level of education',
+      value: 'diploma',
       label: 'Diploma'
     },
     {
-      value: 'Level of education',
+      value: 'undegraduate',
       label: 'Undergraduate'
     },
     {
-      value: 'Level of education',
+      value: 'graduate',
       label: 'Graduate'
     },
     {
-      value: 'Level of education',
+      value: 'bachelor',
       label: 'Bachelors'
 
     }
@@ -45,19 +45,23 @@ export default function Profile() {
   
   ]
 
-    const [currency, setCurrency] = React.useState('EUR');
-
-    const [value, setValue] = React.useState('Controlled');
+    
+const [selectDegree,setSelectDegree]=useState('high school')
+    // const [value, setValue] = React.useState('Controlled');
 
     const handleChange = (event) => {
-      setCurrency(event.target.value);
+      setSelectDegree(event.target.value);
     };
+  const [fName,setFname]=useState()
+  const [lName,setLname]=useState()
+  const [email,setEmail]=useState()
+  const [pNumber,setPnumber]=useState()
+  const [address,setAddress]=useState()
 
+
+
+  
     
-    const {register, handleSubmit, formState: { errors } } =useForm();
-
-    console.log(errors)
-
 
 
   return (
@@ -82,16 +86,14 @@ export default function Profile() {
 
 
 
-      <form onSubmit={handleSubmit((data)=>{
-        console.log(data);
-      })}>
+      
 
             <div className='inputs'>
-            <TextField fullWidth id="outlined-basic" label="FirstName" {...register("FirstName", {require: 'this is required' })} variant="outlined" />
-            <TextField fullWidth id="outlined-basic" label="LastName" {...register("LastName", {require: 'this is required' } )} variant="outlined" />
-            <TextField fullWidth id="outlined-basic" label="Email" {...register("Email")} variant="outlined" />
-            <TextField fullWidth id="outlined-basic" label="Address" {...register("Address")} variant="outlined" />
-            <TextField fullWidth id="outlined-basic" label="PhoneNumber" {...register("PhoneNumber")} variant="outlined" />
+            <TextField fullWidth id="outlined-basic" label="FirstName" variant="outlined" onChange={(e)=>setFname(e.target.value)}/>
+            <TextField fullWidth id="outlined-basic" label="LastName" variant="outlined" onChange={(e)=>setLname(e.target.value)} />
+            <TextField fullWidth id="outlined-basic" label="Email" variant="outlined" onChange={(e)=>setEmail(e.target.value)} />
+            <TextField fullWidth id="outlined-basic" label="Address" variant="outlined" onChange={(e)=>setAddress(e.target.value)} />
+            <TextField fullWidth id="outlined-basic" label="PhoneNumber" variant="outlined" onChange={(e)=>setPnumber(e.target.value)} />
                 
             <Box
               component="form"
@@ -107,11 +109,12 @@ export default function Profile() {
           id="outlined-select-currency"
           select
           label="Select"
-          value={currency}
           onChange={handleChange}
+          value={selectDegree}
+        
           helperText="select your level of education"
         >
-          {currencies.map((option) => (
+          {degree.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
@@ -128,7 +131,7 @@ export default function Profile() {
       noValidate
       autoComplete="off"
     >
-      <div>
+      {/* <div>
         <TextField
           id="outlined-multiline-flexible"
           label="fill in your resume"
@@ -137,20 +140,19 @@ export default function Profile() {
           value={value}
           onChange={handleChange}
         />
-        </div>
+        </div> */}
         </Box>  
             <input type='file' placeholder='upload your CV' /> 
-      </div>
     
-
-
 
 
             <div id="butt" > 
             <Button 
+
                onClick={() => {
-               alert('saved');
+               console.log({fName,lName,email,address,pNumber,selectDegree})
              }}
+             
               >
                 <b>Save</b>
             </Button>
@@ -164,8 +166,7 @@ export default function Profile() {
                 <b>Update</b>
             </Button>
             </div>
-
-            </form>
+            </div>
             
           </Typography>
         </CardContent>

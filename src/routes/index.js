@@ -26,6 +26,7 @@ import UserAroutes from "./user";
 import User1routes from "./user1";
 import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
+import UserAppliations from "../Views/Dshboard/UserAppliations";
 
 function App() {
   return (
@@ -53,6 +54,9 @@ function App() {
       </Route>
       <Route element={<User1routes />}>
         <Route path="/jobseeker" element={<JobSeeker />} />
+      </Route>
+      <Route>
+        <Route path="/applications" element={<UserAppliations />} />
       </Route>
 
       <Route element={<Adminroutes />}>

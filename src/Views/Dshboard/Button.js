@@ -17,7 +17,7 @@ const style = {
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
-    p: 4,
+    // p: 4,
   };
 
 export default function ManagPostedJobs() {
@@ -80,7 +80,7 @@ const TableData = [{
     "candidates": "View",
     "gender": "Female",
     "ip_address": "68.54.224.213"
-}, {
+},  {
     "name": "Lannister Cersei",
     "date": "Dec 12th, 2021",
     "delete": "delete",

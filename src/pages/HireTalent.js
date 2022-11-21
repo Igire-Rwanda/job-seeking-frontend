@@ -2,7 +2,7 @@ import React from 'react'
 
 const HireTalent = () => {
   return (
-    <div>PostJob</div>
+    <div className='p-12'>PostJob</div>
   )
 }
 

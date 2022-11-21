@@ -16,31 +16,31 @@ import Routes from "./routes";
 
 function App() {
 
- 
+
 
   return (
     <>
-       {/* <Provider > */}
+      {/* <Provider > */}
       <Router>
         <Routes></Routes>
-        
+
       </Router>
 
-       {/* </Provider> */}
+      {/* </Provider> */}
     </>
-  //   <BrowserRouter>
-  //  <Routes>
-  //  <Route exact path='/' element={<Home/>}/>
+    //   <BrowserRouter>
+    //  <Routes>
+    //  <Route exact path='/' element={<Home/>}/>
 
-  //   <Route path='/Home' element={<Home/>}/>
-  //   <Route path='/FindJobs' element={<FindJobs/>}/>
-  //   <Route path='/HireTalent' element={<HireTalent/>}/>
-  //   <Route path='/SignIn' element={<SignIn/>}/>
-  //   <Route path='/SignUp' element={<SignUp/>}/>
-  //   <Route path='/Footer' element={<Footer/>}/>
-  //  </Routes>
-  //   </BrowserRouter>
-    
+    //   <Route path='/Home' element={<Home/>}/>
+    //   <Route path='/FindJobs' element={<FindJobs/>}/>
+    //   <Route path='' element={<HireTalent/>}/>
+    //   <Route path='/SignIn' element={<SignIn/>}/>
+    //   <Route path='/SignUp' element={<SignUp/>}/>
+    //   <Route path='/Footer' element={<Footer/>}/>
+    //  </Routes>
+    //   </BrowserRouter>
+
   );
 }
 

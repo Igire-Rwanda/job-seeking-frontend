@@ -8,7 +8,7 @@ const JobCards = () => {
         
         <div className="jobCard">
         <p className="new">New</p> <br/>
-        <h1 className="title1">{data.Title}</h1>
+        <h4 className="title1">{data.Title}</h4>
         <h4 className="h4">{data.Company}</h4>
         <p className="h5">{data.Location}</p>
         <button className="Btn1 h5">{data.Timeline}</button>

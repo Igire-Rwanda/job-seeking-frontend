@@ -47,7 +47,7 @@ const JobSearching = () => {
       
       <div class="contentDivision">
       <div className="jobContainers">
-      <h1 style={{ fontSize: "28px", fontWeight: "800"}}>
+      <h1 style={{ position :"relative",left:"2rem",fontSize: "28px", fontWeight: "800"}}>
         Welcome!
       </h1>
       <br/>

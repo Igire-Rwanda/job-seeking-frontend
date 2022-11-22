@@ -12,43 +12,43 @@ import {
 
 const data = [
   {
-    name: "Page A",
+    name: "Mon",
     users: 4000,
     income: 2400,
     amt: 2400
   },
   {
-    name: "Page B",
+    name: "Tue",
     users: 3000,
     income: 1398,
     amt: 2210
   },
   {
-    name: "Page C",
+    name: "Wed",
     users: 2000,
     income: 9800,
     amt: 2290
   },
   {
-    name: "Page D",
+    name: "Thu",
     users: 2780,
     income: 3908,
     amt: 2000
   },
   {
-    name: "Page E",
+    name: "Fri",
     users: 1890,
     income: 4800,
     amt: 2181
   },
   {
-    name: "Page F",
+    name: "Sat",
     users: 2390,
     income: 3800,
     amt: 2500
   },
   {
-    name: "Page G",
+    name: "Sun",
     users: 3490,
     income: 4300,
     amt: 2100

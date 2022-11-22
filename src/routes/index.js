@@ -26,6 +26,7 @@ import UserAroutes from "./user";
 import User1routes from "./user1";
 import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
+import UserAppliations from "../Views/Dshboard/UserAppliations";
 
 import Button from '../Views/Dshboard/Button';
 
@@ -60,10 +61,16 @@ function App() {
       <Route element={<User1routes />}>
         <Route path="/jobseeker" element={<JobSeeker />} />
       </Route>
+
+      <Route>
+        <Route path="/applications" element={<UserAppliations />} />
+      </Route>
+
           
           <Route>
             <Route path="/users" element={<Profile />} />
           </Route>
+
 
       <Route element={<Adminroutes />}>
         <Route path="/managerUser" element={<Button />} />

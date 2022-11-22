@@ -57,6 +57,8 @@ const handleChange = (event) => {
 
   return (
     <div className='container'>
+
+      
         <h1> FORM APPLICATION</h1>
     <form onSubmit={handleSubmit}>
     
@@ -76,7 +78,7 @@ const handleChange = (event) => {
   name='firstname'
 
   onChange={(e)=>setFname(e.target.value)}
-  label="Job Title"
+  label="company name"
   variant="outlined"
 />
 
@@ -85,7 +87,7 @@ const handleChange = (event) => {
 
       <TextField
           id="standard-textarea"
-          label="Job Description"
+          label="company Description"
           type="text"
           multiline
           variant="standard"
@@ -96,9 +98,26 @@ const handleChange = (event) => {
 </div>
 
 <div>
+
+
+
+<TextField
+   id="outlined-basic"
+    label="job Category"
+   
+    onChange={(e)=>setLang(e.target.value)}
+    type="text"
+    variant="outlined"
+   
+  />
+       
+
+</div>
+
+<div>
 <TextField
           id="standard-textarea"
-          label="Company decription"
+          label="job decription"
           type="text"
           multiline
           variant="standard"
@@ -118,7 +137,7 @@ const handleChange = (event) => {
     onChange={(e)=>setLang(e.target.value)}
     type="text"
     variant="outlined"
-    autoComplete="current-password"
+   
   />
        
 

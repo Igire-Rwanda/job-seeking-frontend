@@ -26,7 +26,11 @@ import UserAroutes from "./user";
 import User1routes from "./user1";
 import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
+
+import Button from '../Views/Dshboard/Button';
+
 import Profile from "../usersDashboard/profile";
+
 
 function App() {
   return (
@@ -61,7 +65,8 @@ function App() {
           </Route>
 
       <Route element={<Adminroutes />}>
-        <Route path="/managerUser" element={<DataTable />} />
+        <Route path="/managerUser" element={<Button />} />
+        <Route path="/Button" element={<Button />} />
         <Route path="/Admindash" element={<AdminChart />} />
         <Route path="/Userdash" element={<UserLayout />} />
         <Route exact path="/cards" element={<JobCards />} />

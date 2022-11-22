@@ -32,7 +32,7 @@ const countries = [
   { code: "Ta", label: "Tanzania", phone: "255" },
   { code: "AT", label: "Austria", phone: "43" },
 ];
-const top100Films = [
+const topJobCategories = [
   { title: "Software Developer", year: 1994 },
   { title: "Full Stack Engineer", year: 1972 },
   { title: "Electrical Engineer", year: 1974 },

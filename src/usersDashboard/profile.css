@@ -6,10 +6,17 @@
     gap: 20px; 
 
  }  */
+ /* .icon{
+   margin-left:450px;
+
+ } */
+ /* .box{
+   display: flex;
+ } */
 
  .inputs{
    display: grid;
-   width: 50%;
+   width: 65%;
    grid-template-columns: repeat(2,1fr);
    gap: 25px;
    margin: auto;

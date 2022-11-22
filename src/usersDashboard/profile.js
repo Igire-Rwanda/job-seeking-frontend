@@ -8,7 +8,8 @@ import { CardActionArea } from '@mui/material';
 import './profile.css';
 import girl from "../img/girl.jpeg";
 import {IconButton, Button,TextField,MenuItem,Box} from '@mui/material';
-import { lightBlue } from '@mui/material/colors';
+import PhotoCamera from '@mui/icons-material/PhotoCamera';
+import { blueGrey, lightBlue } from '@mui/material/colors';
 import { useForm } from 'react-hook-form'
 
 
@@ -57,6 +58,15 @@ const [selectDegree,setSelectDegree]=useState('high school')
   const [email,setEmail]=useState()
   const [pNumber,setPnumber]=useState()
   const [address,setAddress]=useState()
+  const [experience, setExperience]=useState()
+  const [language, setLanguage]=useState()
+  const [skills,setSkills]=useState()
+  const [country,setCountry]=useState()
+
+
+
+
+
 
 
 
@@ -69,14 +79,31 @@ const [selectDegree,setSelectDegree]=useState('high school')
 
     <Card sx={{ maxWidth: 1250,margin:10 }}>
       <CardActionArea>
-        <CardMedia
+     
+               <Button  component="label">
+     <CardMedia
         //   component="img"
         //   height="140"
-          image={girl}
-         sx={{width:120,height:115,borderRadius:50,marginLeft:60,marginTop:10}} 
-         />
+        >
+          <img src={girl} style={{width:120,height:115,borderRadius:50,marginLeft:350,marginTop:40}}/>
+          <input  hidden accept="image/*" multiple type="file" />
+         {/*   */}
+
          <p>user's name</p>
+
+         </CardMedia>
+         <div className='icon'>   
+               <IconButton color="primary" aria-label="upload picture" component="label">
+               <input hidden accept="image/*" type="file" />
+               <PhotoCamera />
+               </IconButton>
+            </div> 
+  
+</Button> 
+<hr></hr>
+         
          <br/> <br/>
+         
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             <span>Build Your Profile</span>
@@ -94,6 +121,13 @@ const [selectDegree,setSelectDegree]=useState('high school')
             <TextField fullWidth id="outlined-basic" label="Email" variant="outlined" onChange={(e)=>setEmail(e.target.value)} />
             <TextField fullWidth id="outlined-basic" label="Address" variant="outlined" onChange={(e)=>setAddress(e.target.value)} />
             <TextField fullWidth id="outlined-basic" label="PhoneNumber" variant="outlined" onChange={(e)=>setPnumber(e.target.value)} />
+            <TextField fullWidth id="outlined-basic" label="Years of experience" variant="outlined" onChange={(e)=>setExperience(e.target.value)} />
+            <TextField fullWidth id="outlined-basic" label="Language Spoken" variant="outlined" onChange={(e)=>setLanguage(e.target.value)} />
+            <TextField fullWidth id="outlined-basic" label="Skills you have" variant="outlined" onChange={(e)=>setSkills(e.target.value)} />
+            <TextField fullWidth id="outlined-basic" label="Country" variant="outlined" onChange={(e)=>setCountry(e.target.value)} />
+
+
+
                 
             <Box
               component="form"
@@ -150,14 +184,14 @@ const [selectDegree,setSelectDegree]=useState('high school')
             <Button 
 
                onClick={() => {
-               console.log({fName,lName,email,address,pNumber,selectDegree})
+               console.log({fName,lName,email,address,pNumber,selectDegree,experience,language,skills,country})
              }}
              
               >
                 <b>Save</b>
             </Button>
             </div>
-            <div id="butto">
+            {/* <div id="butto">
             <Button 
                onClick={() => {
             //    alert('clicked');
@@ -165,7 +199,7 @@ const [selectDegree,setSelectDegree]=useState('high school')
                 >
                 <b>Update</b>
             </Button>
-            </div>
+            </div> */}
             </div>
             
           </Typography>

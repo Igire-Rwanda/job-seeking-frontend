@@ -26,7 +26,11 @@ import UserAroutes from "./user";
 import User1routes from "./user1";
 import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
+
 import Button from '../Views/Dshboard/Button';
+
+import Profile from "../usersDashboard/profile";
+
 
 function App() {
   return (
@@ -55,6 +59,10 @@ function App() {
       <Route element={<User1routes />}>
         <Route path="/jobseeker" element={<JobSeeker />} />
       </Route>
+          
+          <Route>
+            <Route path="/users" element={<Profile />} />
+          </Route>
 
       <Route element={<Adminroutes />}>
         <Route path="/managerUser" element={<Button />} />

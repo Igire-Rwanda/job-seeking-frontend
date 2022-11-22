@@ -5,19 +5,13 @@ import {
   Card,
   TextField,
   Stack,
-  Button,
-  InputLabel,
-  FilledInput,
-  InputAdornment,
-  IconButton,
-  FormControl,
+  Button, 
 } from "@mui/material";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Link from '@mui/material/Link';
 const styles = { width: "100%", height: "100vh" };
 const FormData = () => {
-  const [Email, setEmail] = useState();
+  const [userName, setUserName] = useState();
+  const [password, setPassword] = useState();
   // const login =()=>{
   //   loginAction({email,password})(dispatch);
   // }
@@ -62,47 +56,19 @@ const FormData = () => {
                 <TextField
                   fullWidth
                   id="filled-basic"
-                  label="Email"
+                  label="User Name"
                   variant="filled"
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => setUserName(e.target.value)}
                 />
-
-                <FormControl sx={{ m: 1 }} fullWidth variant="filled">
-                  <InputLabel htmlFor="outlined-adornment-password">
-                    Password
-                  </InputLabel>
-                  <FilledInput
-                    id="outlined-adornment-password"
-                    type={values.showPassword ? "text" : "password"}
-                    value={values.password}
-                    onChange={handleChange("password")}
-                    endAdornment={
-                      <InputAdornment position="end">
-                        <IconButton
-                          aria-label="toggle password visibility"
-                          onClick={handleClickShowPassword}
-                          onMouseDown={handleMouseDownPassword}
-                          edge="end"
-                        >
-                          {values.showPassword ? (
-                            <VisibilityOff />
-                          ) : (
-                            <Visibility />
-                          )
-                        }
-                        </IconButton>
-                      </InputAdornment>
-                    }
-                    label="Password"
-                  />
-                </FormControl>
-                {/* <TextField
-                  fullWidth
-                  id="standard-basic"
-                  label="Forgot Password"
-                  variant="standard"
-                  sx={{ textAlign: "end" }}
-                /> */}
+ 
+                <TextField fullWidth
+          id="filled-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+          variant="filled"
+          onChange={(e) => setPassword(e.target.value)}
+        />
                  <Link
       component="button"
       variant="body2"
@@ -115,10 +81,10 @@ const FormData = () => {
                 <Button
                   fullWidth
                   variant="contained"
-                  // onClick={() => {
-                  //   // navigate("/dashboard");
-                  //   login();
-                  // }}
+                  onClick={() => {
+                  console.log({userName,password})
+                  
+                  }}
                 >
                   Signin
                 </Button>

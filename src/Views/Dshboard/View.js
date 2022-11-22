@@ -46,7 +46,7 @@ export default function AlignItemsList() {
                 variant="body2"
                 color="text.primary"
               >
-                to Scott, Alex, Jennifer
+                to Scott, Alex, Jennifers
               </Typography>
               {" — Wish I could come, but I'm out of town this…"}
             </React.Fragment>

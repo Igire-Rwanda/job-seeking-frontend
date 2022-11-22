@@ -9,8 +9,9 @@ import './profile.css';
 import girl from "../img/girl.jpeg";
 import {IconButton, Button,TextField,MenuItem,Box} from '@mui/material';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
-import { blueGrey, lightBlue } from '@mui/material/colors';
+import { blueGrey, lightBlue, amber } from '@mui/material/colors';
 import { useForm } from 'react-hook-form'
+import EditIcon from '@mui/icons-material/Edit';
 
 
 
@@ -66,18 +67,10 @@ const [selectDegree,setSelectDegree]=useState('high school')
 
 
 
-
-
-
-
-  
-    
-
-
   return (
     <div>
 
-    <Card sx={{ maxWidth: 1250,margin:10 }}>
+    <Card sx={{ maxWidth: 1250,margin:10, backgroundColor:amber}}>
       <CardActionArea>
      
                <Button  component="label">
@@ -85,7 +78,7 @@ const [selectDegree,setSelectDegree]=useState('high school')
         //   component="img"
         //   height="140"
         >
-          <img src={girl} style={{width:120,height:115,borderRadius:50,marginLeft:350,marginTop:40}}/>
+          <img src={girl} style={{width:120,height:115,borderRadius:50,marginLeft:280,marginTop:40}}/>
           <input  hidden accept="image/*" multiple type="file" />
          {/*   */}
 

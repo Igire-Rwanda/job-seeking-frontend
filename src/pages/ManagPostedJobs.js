@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Navbar from '../components/Navbar';
 import TableItem from './TableItem';
+import JobsList from './JobsList';
+import "./hiretalent.css";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -52,7 +54,7 @@ export default function VerticalTabs() {
         <>
             <Navbar />
 
-            <Box className='mt-32'
+            <Box className='mt-18'
                 sx={{ flexGrow: 1, bgcolor: 'none', display: 'flex' }}
             >
                 <Tabs
@@ -64,8 +66,8 @@ export default function VerticalTabs() {
                     sx={{ borderRight: 1, borderColor: 'divider' }}
                 >
                     <Tab label="Post a Job" {...a11yProps(0)} />
-                    <Tab label="Posted Jobs" {...a11yProps(1)} />
-                    <Tab label="Candidates" {...a11yProps(2)} />
+                    <Tab label="Manage Posted Jobs" {...a11yProps(1)} />
+                    <Tab label="Jobs" {...a11yProps(2)} />
                     <Tab label="Item Four" {...a11yProps(3)} />
                     <Tab label="Item Five" {...a11yProps(4)} />
                     <Tab label="Item Six" {...a11yProps(5)} />
@@ -78,7 +80,7 @@ export default function VerticalTabs() {
                     <TableItem />
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    Item Three
+                    <JobsList />
                 </TabPanel>
                 <TabPanel value={value} index={3}>
                     Item Four

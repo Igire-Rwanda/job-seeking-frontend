@@ -7,7 +7,7 @@ const JobsList = () => {
     <>
         {/* <JobCards /> */}
 
-        <div className="jobCaard">
+        <div className="jobCaard JobsContent">
           {/* <br/> */}
           <h4 className="title1">SOFTWARE ENGINEER I</h4>
           <h4 className="h4">Amazon.com Services LLc</h4>

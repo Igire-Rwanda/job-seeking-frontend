@@ -67,7 +67,7 @@ export default function VerticalTabs() {
                 >
                     <Tab label="Post a Job" {...a11yProps(0)} />
                     <Tab label="Manage Posted Jobs" {...a11yProps(1)} />
-                    <Tab label="Jobs" {...a11yProps(2)} />
+                    <Tab label="Item Three" {...a11yProps(2)} />
                     <Tab label="Item Four" {...a11yProps(3)} />
                     <Tab label="Item Five" {...a11yProps(4)} />
                     <Tab label="Item Six" {...a11yProps(5)} />
@@ -80,7 +80,8 @@ export default function VerticalTabs() {
                     <TableItem />
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    <JobsList />
+                    {/* <JobsList /> */}
+                    Item Three
                 </TabPanel>
                 <TabPanel value={value} index={3}>
                     Item Four

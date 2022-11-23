@@ -64,6 +64,7 @@ export default function TableItem() {
 
                                         <TableCell align='center' bg-blue-300>
                                             <Button sx={{ bgcolor: 'rgba(81, 185, 167, 0.29)' }} onClick={handleOpen}>{row.job_detail}</Button>
+                                            <Button onClick={handleClose}>Close Modal</Button>
                                         </TableCell>
                                         <TableCell align='center'>
                                             <Button sx={{ bgcolor: 'rgba(57, 166, 234, 0.3)' }} onClick={handleOpn}>{row.candidates}</Button>

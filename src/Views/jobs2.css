@@ -11,9 +11,10 @@
   color: black;
   padding: 20px;
 }
-.JobsContent{
+.JobsContent2{
     display: flex;
     gap:2rem;
+    padding: 1rem;
 }
 .siderB {
   display: flex;
@@ -128,11 +129,21 @@ input {
   border: 1px solid black;
 }
 .btn3 {
-  padding: 5px 24px;
+  padding: 5px 10px;
   background-color: #63c49a;
   border-radius: 20px;
   border: 2px solid #63c49a;
+  /* width: 250px; */
 }
+
+.btn4 {
+  padding: 10px 70px;
+  background-color: #ffd201;
+  border-radius: 20px;
+  border: 2px solid #ffd201;
+  /* width: 250px; */
+}
+
 .IconBtn{
   padding: 3px 24px;
  

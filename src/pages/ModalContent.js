@@ -1,47 +1,64 @@
-import React from 'react'
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { link, NavLink } from 'react-router-dom'
+import '../Views/jobs2.css'
 
-const ModalContent = () => {
+export default function ModalContent() {
     return (
-        <div className='w-[650px] overflow-y-auto h-[500px]'>
-            <h2 className='pt-4 text-2xl'>Job Title  </h2><hr /><span>Dec 12th, 2021</span>
+        <Box sx={{ width: "80%", padding:4, paddingTop:10, height:900, backgroundColor: "rgba(255, 255, 255)", margin:"auto" }}>
 
-            <div>
-                <h3 className='pt-4 pb-4'>Job Description</h3>
-                <p>We are hiring for a highly skilled Backend Developer
-                    professional to join our team in Rwanda. If you're excited to be part of
-                    an excellent startup team, AmaliTech is a great place to grow your career.
-                    You'll be glad you applied to AmaliTech.
-                </p>
-            </div><hr />
+            <Typography variant="h4" gutterBottom >
+                Job Title
+            </Typography>
+            <Typography variant="caption" display="block" gutterBottom>
+                Dec 12th, 2021
+            </Typography><br/>
 
-            <div>
-                <h3 className='pt-4 pb-4'>Responsibilities</h3>
-                <p>
-                    <ul>
-                        <li>Develop server-side logic, REST, and GraphQL APIs with platforms such as NodeJS and Python.</li>
-                        <li>Help improve code quality through writing unit tests, integration tests, and performing code reviews.</li>
-                        <li>Develop server-side logic, REST, and GraphQL APIs with platforms such as NodeJS and Python.</li>
-                        <li>Help improve code quality through writing unit tests, integration tests, and performing code reviews.</li>                    <li>Develop server-side logic, REST, and GraphQL APIs with platforms such as NodeJS and Python.</li>
-                        <li>Help improve code quality through writing unit tests, integration tests, and performing code reviews.</li>                    <li>Develop server-side logic, REST, and GraphQL APIs with platforms such as NodeJS and Python.</li>
-                        <li>Help improve code quality through writing unit tests, integration tests, and performing code reviews.</li>                    <li>Develop server-side logic, REST, and GraphQL APIs with platforms such as NodeJS and Python.</li>
-                        <li>Help improve code quality through writing unit tests, integration tests, and performing code reviews.</li>
+            <Typography variant="h6" gutterBottom sx={{paddingBottom:20}}>
+                Job Description
+            </Typography><br/>
+            <Typography variant="body1" gutterBottom>
+                We are hiring for a highly skilled Backend Developer
+                professional to join our team in Rwanda. If you're excited to be part of
+                an excellent startup team, AmaliTech is a great place to grow your career.
+                You'll be glad you applied to AmaliTech.
+            </Typography><br/>
 
-                    </ul>
-                </p>
-            </div><hr />
+            <Typography variant="h6" gutterBottom>
+                Responsibilities
+            </Typography><br/>
+            <Typography variant="body1" gutterBottom>
+                <ul>
+                    <li>Develop server-side logic, REST, and GraphQL APIs with platforms such as NodeJS and Python.</li>
+                    <li>Help improve code quality through writing unit tests, integration tests, and performing code reviews.</li>
+                    <li>Develop server-side logic, REST, and GraphQL APIs with platforms such as NodeJS and Python.</li>
+                    <li>Help improve code quality through writing unit tests, integration tests, and performing code reviews.</li>                    <li>Develop server-side logic, REST, and GraphQL APIs with platforms such as NodeJS and Python.</li>
+                    <li>Help improve code quality through writing unit tests, integration tests, and performing code reviews.</li>                    <li>Develop server-side logic, REST, and GraphQL APIs with platforms such as NodeJS and Python.</li>
+                    <li>Help improve code quality through writing unit tests, integration tests, and performing code reviews.</li>                    <li>Develop server-side logic, REST, and GraphQL APIs with platforms such as NodeJS and Python.</li>
+                    <li>Help improve code quality through writing unit tests, integration tests, and performing code reviews.</li>
 
-            <div>
-                <h3 className='pt-4 pb-4'>Job Qualifications</h3>
-                <p>In order to be eligible, one must satisfy one of the following two:
+                </ul>
+            </Typography> <br/>
+
+            <Typography variant="h6" gutterBottom>
+            Job Qualifications
+            </Typography><br/>
+            <Typography variant="body1" gutterBottom>
+            In order to be eligible, one must satisfy one of the following two:
                     Minimum of  a Bachelor’s Degree Computer Science, Computer/Software Engineering/ IT OR
                     A Bachelor’s Degree in STEM field with proficiency in at least one of the programming languages C++, Java or JavaScript
                     Must have taken courses in Data Structures, Algorithms, Object Oriented Programming during their undergraduate studies
                     Strong interest and temperament for Computer Programming and Mathematics is a must
                     Previous software development experience is an advantage
-                </p>
-            </div>
-        </div>
-    )
-}
+            </Typography> <br />
 
-export default ModalContent
+            <Typography variant="button" display="block" gutterBottom sx={{ display: "flex", justifyContent:"center"}}>
+                <NavLink to='/SignUp'><button className="btn4">APPLY HERE</button></NavLink>
+
+            </Typography>
+
+
+        </Box>
+    );
+}

@@ -27,6 +27,7 @@ import User1routes from "./user1";
 import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
 import ManagPostedJobs from "../pages/ManagPostedJobs";
+import ModalContent from "../pages/ModalContent";
 
 function App() {
   return (
@@ -50,7 +51,9 @@ function App() {
         <Route path="/Candidates" element={<Candidates />} />
         <Route path="/Billing" element={<Billing />} />
         <Route path="/aboutUs" element={<AboutUs />} />
- 
+        <Route path="/applyPage" element={<ModalContent />} />
+
+
       </Route>
 
       <Route >

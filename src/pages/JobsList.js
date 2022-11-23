@@ -1,8 +1,6 @@
 import React from 'react';
 import "./hiretalent.css";
-
 // import JobCards from '../components/jobCard';
-// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const JobsList = () => {
   return (

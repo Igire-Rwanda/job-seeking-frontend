@@ -107,7 +107,7 @@ const Home = ({onClose}) => {
         {jobs.map((data) => (
 
           <div className="jobCard">
-            {/* <p className="new">New</p> <br /> */}
+          
             <h4 className="title1">{data.Title}</h4><br />
             <h4 className="h4">{data.Company}</h4>
             <p className="h5">{data.Location}</p>
@@ -120,7 +120,7 @@ const Home = ({onClose}) => {
 
               <NavLink to='/ReadMore' onClick={onClose} ><button className="btn3">READ MORE</button></NavLink>
               <div className="IconBtn">
-                {/* <FavoriteBorderIcon /> */}
+              
               </div>
             </div>
           </div>

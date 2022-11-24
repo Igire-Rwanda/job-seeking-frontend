@@ -26,12 +26,15 @@ import UserAroutes from "./user";
 import User1routes from "./user1";
 import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
+
+import ManagPostedJobs from "../pages/ManagPostedJobs";
+import ModalContent from "../pages/ModalContent";
+
 import UserAppliations from "../Views/Dshboard/UserAppliations";
 
 import Button from '../Views/Dshboard/Button';
 
 import Profile from "../usersDashboard/profile";
-
 
 function App() {
   return (
@@ -56,8 +59,15 @@ function App() {
         <Route path="/Candidates" element={<Candidates />} />
         <Route path="/Billing" element={<Billing />} />
         <Route path="/aboutUs" element={<AboutUs />} />
- 
+        <Route path="/ReadMore" element={<ModalContent />} />
+
+
       </Route>
+
+      <Route >
+        <Route path="/postedJobs" element={<ManagPostedJobs />} />
+      </Route>
+
       <Route element={<User1routes />}>
         <Route path="/jobseeker" element={<JobSeeker />} />
       </Route>

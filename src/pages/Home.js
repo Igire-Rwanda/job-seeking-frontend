@@ -10,7 +10,7 @@ import { link, NavLink } from 'react-router-dom'
 import '../Views/jobs2.css'
 
 
-const Home = ({onClose}) => {
+const Home = ({ onClose }) => {
 
   const [job, setJob] = useState('')
 
@@ -46,32 +46,10 @@ const Home = ({onClose}) => {
           <span className='flex'> {job}</span>
 
           <button className='btn'>Find Jobs</button>
-          {/* <label class="block text-l font-bold ">Select Job Type</label>
-          <select id="states" class="border  text-gray-900 text-sm   border-l-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-slate-200 dark:border-gray-300  dark:text-">
-            <option selected>Choose Option</option>
-            <option value="CA">Name</option>
-            <option value="TX">Date Posted</option>
-
-          </select> */}
-
-          {/* <h1 class="block text-l font-bold ">Select Location</h1>
-          <select id="Jobs" className="bg-white text-slate-400 ml-5">
-            <option selected >Kigali</option>
-            <option value="web">Muhanga</option>
-            <option value="Ui">Nairobi</option>
-            <option value="Acc">Kampala</option>
-            <option value="SE">Bujumbura</option>
-          </select>
-          <button className='btn'>Find Jobs</button> */}
         </div>
 
 
         <div className='flex flex-row space-x-40'>
-          {/* <div className='icon1'>
-            <h5 className='font-bold text-2xl'>20k+</h5>
-            <h6 >Job Vacancy</h6>
-
-          </div> */}
           <div className='bg-yellow-400 w-24	ml-20 h-24 mt-20 mb-20 rounded pl-8 py-4'>
 
             <h5 className='font-bold text-2xl ml-5'>20k+</h5>
@@ -80,34 +58,20 @@ const Home = ({onClose}) => {
           <div className='bg-sky-500 w-24	ml-20 h-24 mt-20 mb-20 rounded pl-8 py-4'>
 
             <h5 className='font-bold text-2xl ml-5'>50k+</h5>
-            <h6 className='ml-5'>People got hired</h6>  {/* <img className=' w-20 mb-10' src={icon}/> */}
+            <h6 className='ml-5'>People got hired</h6>
 
           </div>
 
           <div className='bg-orange-600 w-24	ml-20 h-24 mt-20 mb-20 rounded pl-8 py-4'>
             <h5 className='font-bold text-2xl ml-5'>2K+</h5>
             <h6 className='ml-5'>Companies</h6></div>
-          {/* <div className='icon2'>
-            <img className='w-80 mb-10' src={icon} />
-
-            <h5 className='font-bold text-2xl'>50k+</h5>
-            <h6>People got hired</h6>
-
-          </div> */}
-          {/* <div className='icon3'>
-
-
-          </div> */}
         </div>
       </div>
-      {/* <EmployerDashboard /> */}
-
       <div className='JobsContent2'>
 
         {jobs.map((data) => (
 
           <div className="jobCard">
-            {/* <p className="new">New</p> <br /> */}
             <h4 className="title1">{data.Title}</h4><br />
             <h4 className="h4">{data.Company}</h4>
             <p className="h5">{data.Location}</p>
@@ -120,7 +84,6 @@ const Home = ({onClose}) => {
 
               <NavLink to='/ReadMore' onClick={onClose} ><button className="btn3">READ MORE</button></NavLink>
               <div className="IconBtn">
-                {/* <FavoriteBorderIcon /> */}
               </div>
             </div>
           </div>

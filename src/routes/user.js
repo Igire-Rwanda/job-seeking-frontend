@@ -1,6 +1,6 @@
 import React from "react";
 import {  Outlet } from "react-router-dom";
-import HomeLayout from "../components/homeLayout";
+import HomeLayout from "../components/HomeLayout";
 const Index = () => {
   return (
     <HomeLayout>

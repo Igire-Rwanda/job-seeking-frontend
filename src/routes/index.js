@@ -40,7 +40,7 @@ function App() {
   return (
     <Routes>
       <Route element={<UserAroutes />}>
-      
+
         <Route path="/contactUs" element={<ContactUS />} />
         <Route path="/jobs" element={<JobSearching />} />
         <Route path="/jobseeker" element={<JobSeeker />} />
@@ -76,10 +76,10 @@ function App() {
         <Route path="/applications" element={<UserAppliations />} />
       </Route>
 
-          
-          <Route>
-            <Route path="/users" element={<Profile />} />
-          </Route>
+
+      <Route>
+        <Route path="/users" element={<Profile />} />
+      </Route>
 
 
       <Route element={<Adminroutes />}>

@@ -31,16 +31,23 @@
 .icons {
     display: flex;
     gap: 16px;
-
-
 }
 
 .copyright {
-    padding: 40px;
+    padding: 30px;
     display: flex;
-    margin: 0 40px;
     justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
 
+.copy-paragraph {
+    margin: 0;
+}
+
+.copy-paragraph p {
+    margin: 0;
+    padding: 0;
 }
 
 .ligne {

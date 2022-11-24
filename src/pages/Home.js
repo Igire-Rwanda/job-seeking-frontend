@@ -58,34 +58,20 @@ const Home = ({ onClose }) => {
           <div className='bg-sky-500 w-24	ml-20 h-24 mt-20 mb-20 rounded pl-8 py-4'>
 
             <h5 className='font-bold text-2xl ml-5'>50k+</h5>
-            <h6 className='ml-5'>People got hired</h6> 
+            <h6 className='ml-5'>People got hired</h6>
 
           </div>
 
           <div className='bg-orange-600 w-24	ml-20 h-24 mt-20 mb-20 rounded pl-8 py-4'>
             <h5 className='font-bold text-2xl ml-5'>2K+</h5>
             <h6 className='ml-5'>Companies</h6></div>
-          {/* <div className='icon2'>
-            <img className='w-80 mb-10' src={icon} />
-
-            <h5 className='font-bold text-2xl'>50k+</h5>
-            <h6>People got hired</h6>
-
-          </div> */}
-          {/* <div className='icon3'>
-
-
-          </div> */}
         </div>
       </div>
-      {/* <EmployerDashboard /> */}
-
       <div className='JobsContent2'>
 
         {jobs.map((data) => (
 
           <div className="jobCard">
-            {/* <p className="new">New</p> <br /> */}
             <h4 className="title1">{data.Title}</h4><br />
             <h4 className="h4">{data.Company}</h4>
             <p className="h5">{data.Location}</p>
@@ -98,7 +84,6 @@ const Home = ({ onClose }) => {
 
               <NavLink to='/ReadMore' onClick={onClose} ><button className="btn3">READ MORE</button></NavLink>
               <div className="IconBtn">
-                {/* <FavoriteBorderIcon /> */}
               </div>
             </div>
           </div>

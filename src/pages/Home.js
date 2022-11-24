@@ -10,7 +10,7 @@ import { link, NavLink } from 'react-router-dom'
 import '../Views/jobs2.css'
 
 
-const Home = ({onClose}) => {
+const Home = ({ onClose }) => {
 
   const [job, setJob] = useState('')
 
@@ -46,32 +46,10 @@ const Home = ({onClose}) => {
           <span className='flex'> {job}</span>
 
           <button className='btn'>Find Jobs</button>
-          {/* <label class="block text-l font-bold ">Select Job Type</label>
-          <select id="states" class="border  text-gray-900 text-sm   border-l-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-slate-200 dark:border-gray-300  dark:text-">
-            <option selected>Choose Option</option>
-            <option value="CA">Name</option>
-            <option value="TX">Date Posted</option>
-
-          </select> */}
-
-          {/* <h1 class="block text-l font-bold ">Select Location</h1>
-          <select id="Jobs" className="bg-white text-slate-400 ml-5">
-            <option selected >Kigali</option>
-            <option value="web">Muhanga</option>
-            <option value="Ui">Nairobi</option>
-            <option value="Acc">Kampala</option>
-            <option value="SE">Bujumbura</option>
-          </select>
-          <button className='btn'>Find Jobs</button> */}
         </div>
 
 
         <div className='flex flex-row space-x-40'>
-          {/* <div className='icon1'>
-            <h5 className='font-bold text-2xl'>20k+</h5>
-            <h6 >Job Vacancy</h6>
-
-          </div> */}
           <div className='bg-yellow-400 w-24	ml-20 h-24 mt-20 mb-20 rounded pl-8 py-4'>
 
             <h5 className='font-bold text-2xl ml-5'>20k+</h5>
@@ -80,7 +58,7 @@ const Home = ({onClose}) => {
           <div className='bg-sky-500 w-24	ml-20 h-24 mt-20 mb-20 rounded pl-8 py-4'>
 
             <h5 className='font-bold text-2xl ml-5'>50k+</h5>
-            <h6 className='ml-5'>People got hired</h6>  {/* <img className=' w-20 mb-10' src={icon}/> */}
+            <h6 className='ml-5'>People got hired</h6> 
 
           </div>
 

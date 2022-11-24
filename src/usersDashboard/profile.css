@@ -14,42 +14,45 @@
    display: flex;
  } */
 
- .inputs{
-   display: grid;
-   width: 65%;
-   grid-template-columns: repeat(2,1fr);
-   gap: 25px;
-   margin: auto;
+ .inputs {
+    display: grid;
+    width: 65%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: auto;
  }
- p{
+
+ p {
     margin-left: 46%;
  }
- span{
+
+ span {
     margin-left: 42%;
  }
-  #butt{
+
+ #butt {
     padding: 10px;
     background-color: #63c49a;
-    color: aliceblue; 
+    color: aliceblue;
     width: 150px;
     border-radius: 15px;
-    text-align:center;
+    text-align: center;
 
  }
- #butt Button{
-    color: aliceblue;
-}        
- #butto Button{
+
+ #butt Button {
     color: aliceblue;
  }
- #butto{
+
+ #butto Button {
+    color: aliceblue;
+ }
+
+ #butto {
     padding: 10px;
-    background-color: #44b4d2;
+    background-color: #63c49a;
     /* color: aliceblue; */
     width: 150px;
     border-radius: 15px;
-    text-align:center;
- } 
-
- 
-
+    text-align: center;
+ }

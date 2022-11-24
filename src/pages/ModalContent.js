@@ -1,20 +1,32 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { link, NavLink } from 'react-router-dom'
 import '../Views/jobs2.css'
+import CloseIcon from '@mui/icons-material/Close';
 
-export default function ModalContent() {
+
+
+
+export default function ModalContent({onClose}) {
     return (
-        <Box sx={{ width: "80%", padding:4, paddingTop:10, height:900, backgroundColor: "rgba(255, 255, 255)", margin:"auto" }}>
-
-            <Typography variant="h4" gutterBottom >
+        <>
+        <Box sx={{ width: "80%", padding:4, paddingTop:10, height:"100%", backgroundColor: "rgba(255, 255, 255)", margin:"auto" }}>
+            <div className="flex justify-between">
+            <div>
+               <Typography variant="h4" gutterBottom >
                 Job Title
             </Typography>
             <Typography variant="caption" display="block" gutterBottom>
                 Dec 12th, 2021
-            </Typography><br/>
-
+            </Typography><br/> 
+            </div>
+            <div>
+            <CloseIcon style={{width: 50, height: 50, cursor: "pointer"}} onClick={onClose}/>
+            </div>
+            </div>
+            
             <Typography variant="h6" gutterBottom sx={{paddingBottom:20}}>
                 Job Description
             </Typography><br/>
@@ -55,10 +67,10 @@ export default function ModalContent() {
 
             <Typography variant="button" display="block" gutterBottom sx={{ display: "flex", justifyContent:"center"}}>
                 <NavLink to='/SignUp'><button className="btn4">APPLY HERE</button></NavLink>
-
             </Typography>
-
-
         </Box>
+        
+        </>
+        
     );
 }

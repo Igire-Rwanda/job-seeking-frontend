@@ -39,7 +39,7 @@ export default function TableItem() {
                 <Navbar />
             </div>
 
-            <div className='flex  divide-x-2'>
+            <div className='flex divide-x-2'>
 
                 <div className='w-[1000px]'>
                     <TableContainer component={Paper} sx={{ maxHeight: '600px' }} >
@@ -64,7 +64,6 @@ export default function TableItem() {
 
                                         <TableCell align='center' bg-blue-300>
                                             <Button sx={{ bgcolor: 'rgba(81, 185, 167, 0.29)' }} onClick={handleOpen}>{row.job_detail}</Button>
-                                            <Button onClick={handleClose}>Close Modal</Button>
                                         </TableCell>
                                         <TableCell align='center'>
                                             <Button sx={{ bgcolor: 'rgba(57, 166, 234, 0.3)' }} onClick={handleOpn}>{row.candidates}</Button>
@@ -87,7 +86,7 @@ export default function TableItem() {
                     aria-describedby="modal-modal-description"
                 >
                     <Box sx={style}>
-                        <ModalContent />
+                        <ModalContent onClose={handleClose}/>
                     </Box>
                 </Modal>
 

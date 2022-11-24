@@ -17,8 +17,9 @@ const Navbar = () => {
         <NavLink to='/FindJobs'><li className='mx-4 hover:text-teal-500 duration-500 cursor-pointer text-l md:ml-8 md:my-0 my-5 py-3 px-5'>Find Jobs</li></NavLink> 
         <NavLink to='/HireTalent'><li className='mx-4 hover:text-teal-500 duration-500 cursor-pointer text-l md:ml-8 md:my-0 my-5 py-3 px-5'>Hire Talent</li></NavLink>  
          <NavLink to='/SignIn'><li className='mx-4  px-5 py-3 cursor-pointer'>Sign In</li> </NavLink> 
-
         <NavLink to='/SignUp'><button className=' mx-8 bg-sky-500		rounded-md py-2 px-6 md:ml-8 text-white'>Sign Up</button></NavLink> 
+        {/* <NavLink to='/jobSeekerDash'><button className=' mx-8 bg-sky-500		rounded-md py-2 px-6 md:ml-8 text-white'>dashboard</button></NavLink>  */}
+
 
 
          </ul>

@@ -32,7 +32,7 @@ const countries = [
   { code: "Ta", label: "Tanzania", phone: "255" },
   { code: "AT", label: "Austria", phone: "43" },
 ];
-const top100Films = [
+const topJobCategories = [
   { title: "Software Developer", year: 1994 },
   { title: "Full Stack Engineer", year: 1972 },
   { title: "Electrical Engineer", year: 1974 },
@@ -44,68 +44,68 @@ const top100Films = [
 const JobSearching = () => {
   return (
     <div className="JobsPage">
-
+      
       <div class="contentDivision">
-        <div className="jobContainers">
-          <h1 style={{ position: "relative", left: "2rem", fontSize: "28px", fontWeight: "800" }}>
-            Welcome!
-          </h1>
-          <br />
-          <div className="carts">
-            <div class="cart">
-              <h3
-                style={{ color: "#44B4D2", fontWeight: "bold", fontSize: "24px" }}
-              >
-                <NoteIcon />
-              </h3>
-              <p>Interviews</p>
-            </div>
-            <div class="cart">
-              <h3
-                style={{ color: "#44B4D2", fontWeight: "bold", fontSize: "24px" }}
-              >
-                <LaunchIcon />
-              </h3>
-              <p>Applications</p>
-            </div>
-            <div className="cart">
-              <h3
-                style={{ color: "#44B4D2", fontWeight: "bold", fontSize: "20px" }}
-              >
-                <FavoriteBorderIcon />
-              </h3>
-              <p>Saved Jobs</p>
-            </div>
-            <div className="cart">
-              <h3
-                style={{ color: "#44B4D2", fontWeight: "bold", fontSize: "20px" }}
-              >
-                <VisibilityIcon />
-              </h3>
-              <p>Recently viewed</p>
-            </div>
+      <div className="jobContainers">
+      <h1 style={{ position:"relative",left:"2rem",fontSize: "28px", fontWeight: "800"}}>
+        Welcome!
+      </h1>
+      <br/>
+      <div className="carts">
+          <div class="cart">
+            <h3
+              style={{ color: "#44B4D2", fontWeight: "bold", fontSize: "24px" }}
+            >
+              <NoteIcon />
+            </h3>
+            <p>Interviews</p>
+          </div>
+          <div class="cart">
+            <h3
+              style={{ color: "#44B4D2", fontWeight: "bold", fontSize: "24px" }}
+            >
+              <LaunchIcon />
+            </h3>
+            <p>Applications</p>
+          </div>
+          <div className="cart">
+            <h3
+              style={{ color: "#44B4D2", fontWeight: "bold", fontSize: "20px" }}
+            >
+              <FavoriteBorderIcon />
+            </h3>
+            <p>Saved Jobs</p>
+          </div>
+          <div className="cart">
+            <h3
+              style={{ color: "#44B4D2", fontWeight: "bold", fontSize: "20px" }}
+            >
+              <VisibilityIcon />
+            </h3>
+            <p>Recently viewed</p>
           </div>
         </div>
-        <Divider />
-        <div style={{ padding: "40px 0 0px 0" }}>
-          <button class="btn2">Jobs Hiring Now</button>
+        </div>
+        <Divider/>
+        <div style={{padding:"40px 0 0px 0"}}>
+        <button class="btn2">Jobs Hiring Now</button>
         </div>
         <br />
 
         <div className="JobsContent">
           <JobCards />
         </div>
-        <div style={{ padding: "30px 0" }}>
-          <p className=" p1">Jobs based on your Activities</p>
+        <div style={{padding:"30px 0"}}>
+        <p className=" p1">Jobs based on your Activities</p>
         </div>
         <div className="JobsContent">
           <JobCards />
         </div>
-        <div style={{ padding: "30px 0" }}>
-          <p className="h1 p1">Discover more great jobs</p>
-          <p>
-            Jobs matches based on your preferences
-          </p>
+        <div style={{padding:"30px 0"}}>
+        <p className="h1 p1">Discover more great jobs</p>
+        <p>
+          Jobs matches based on your preferences
+        </p>
         </div>
         <div className="carts">
           <div class="cart">
@@ -136,16 +136,18 @@ const JobSearching = () => {
             <p>Design your own schedule</p>
           </div>
         </div>
-
+      
       </div>
       <div className="JobsFooter">
-        <div class="Jobbutton">
-          <nbsp />
-          <p>Let Employers find you</p>
-          <Button class="btn6">Upload Your Resume</Button>
+          <div class="Jobbutton">
+            <nbsp />
+            <p>Let Employers find you</p>
+            <Button class="btn6">Upload Your Resume</Button>
+          </div>
         </div>
-      </div>
     </div>
   );
 };
 export default JobSearching;
+         
+      

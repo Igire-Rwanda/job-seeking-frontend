@@ -14,13 +14,13 @@ const AdminChart = () => (
      
       <div style={{ display: "flex" ,width:'200px'}}>
         <div>
-        <h1 className="title">Visitors</h1>
+        {/* <h1 className="title">Visitors</h1> */}
         <br/>
         <AreaChart/>
         </div>
     
         <div>
-          <h1 className="title">Income</h1>
+          {/* <h1 className="title">Income</h1> */}
           <br/>
         <ChartBar />
         </div>

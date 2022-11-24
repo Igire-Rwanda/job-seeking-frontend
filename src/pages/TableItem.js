@@ -92,12 +92,12 @@ export default function TableItem() {
 
                 <Modal
                     open={opn}
-                    onClose={handleClse}
+                    onClse={handleClse}
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                 >
                     <Box sx={style}>
-                        <ModalCandidates />
+                        <ModalCandidates onClse={handleClse} />
                     </Box>
                 </Modal>
 

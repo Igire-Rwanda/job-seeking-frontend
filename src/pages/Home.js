@@ -6,11 +6,11 @@ import icon from '../img/user.png'
 import JobCards from '../components/jobCard'
 import JobsList from './JobsList'
 import jobs from '../components/Assets/Jobs.json';
-import {link, NavLink} from 'react-router-dom'
+import { link, NavLink } from 'react-router-dom'
 import '../Views/jobs2.css'
 
 
-const Home = () => {
+const Home = ({onClose}) => {
 
   const [job, setJob] = useState('')
 
@@ -109,8 +109,8 @@ const Home = () => {
           <div className="jobCard">
             {/* <p className="new">New</p> <br /> */}
             <h4 className="title1">{data.Title}</h4><br />
-            <h4 className="h4">{data.Company}</h4> 
-            <p className="h5">{data.Location}</p> 
+            <h4 className="h4">{data.Company}</h4>
+            <p className="h5">{data.Location}</p>
             <h4 className="Btn1 h5">{data.Timeline}</h4> <br />
             <div className="siderA">
               {data.Description}
@@ -118,7 +118,7 @@ const Home = () => {
             <br />
             <div className="siderB">
 
-            <NavLink to='/applyPage'><button className="btn3">READ MORE</button></NavLink>
+              <NavLink to='/ReadMore' onClick={onClose} ><button className="btn3">READ MORE</button></NavLink>
               <div className="IconBtn">
                 {/* <FavoriteBorderIcon /> */}
               </div>

@@ -51,7 +51,7 @@ function App() {
         <Route path="/Candidates" element={<Candidates />} />
         <Route path="/Billing" element={<Billing />} />
         <Route path="/aboutUs" element={<AboutUs />} />
-        <Route path="/applyPage" element={<ModalContent />} />
+        <Route path="/ReadMore" element={<ModalContent />} />
 
 
       </Route>

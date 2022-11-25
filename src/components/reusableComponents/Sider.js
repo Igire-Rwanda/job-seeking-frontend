@@ -17,9 +17,9 @@ import { Box } from "@mui/system";
 const adminItems = [
   { name: "Dashboard overview", icon: <StarBorder />, path: "/Admindash" },
   { name: "Manage Users", icon: <InboxIcon />, path: "/managerUser" },
-  { name: "Manage Candidates", icon: <PeopleAltIcon />, path: "/cards" },
-  { name: "Manage Posts", icon: <DraftsIcon />, path: "/jobseeker" },
-  { name: "Manage Employers", icon: <InboxIcon />, path: "/managerUser" },
+  // { name: "", icon: <PeopleAltIcon />, path: "/cards" },
+  { name: "Manage Posts", icon: <DraftsIcon />, path: "/Post" },
+  // { name: "", icon: <InboxIcon />, path: "/managerUser" },
   { name: "Settings", icon: <SettingsIcon /> },
   { name: "Help", icon: <ContactSupportIcon /> },
 ];

@@ -28,7 +28,7 @@ import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
 import UserAppliations from "../Views/Dshboard/UserAppliations";
 
-import Button from '../Views/Dshboard/Button';
+import User from '../Views/Dshboard/User';
 
 import Profile from "../usersDashboard/profile";
 
@@ -73,8 +73,8 @@ function App() {
 
 
       <Route element={<Adminroutes />}>
-        <Route path="/managerUser" element={<Button />} />
-        <Route path="/Button" element={<Button />} />
+        <Route path="/managerUser" element={<User />} />
+        <Route path="/User" element={<User />} />
         <Route path="/Admindash" element={<AdminChart />} />
         <Route path="/Userdash" element={<UserLayout />} />
         <Route exact path="/cards" element={<JobCards />} />

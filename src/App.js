@@ -6,6 +6,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
+// import profile from "./usersDashboard/profile";
+// import UserProfile from "./components/UserProfile";
 
 
 //redux
@@ -24,9 +26,13 @@ function App() {
     
     
       <Router>
-        <Routes></Routes>
+        <Routes>
+          {/* <profile /> */}
+          
+        </Routes>
         
       </Router>
+      {/* <UserProfile /> */}
 
        {/* </Provider> */}
     </>

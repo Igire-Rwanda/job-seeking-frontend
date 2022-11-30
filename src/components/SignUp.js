@@ -55,13 +55,13 @@ export default function SignUp() {
               // type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 ,bgcolor:"green"}}
+              sx={{ mt: 3, mb: 2 ,bgcolor:"magenta"}}
             >
-              Continue with Google
+              Continue with Instagram
             </Button>
           
 
-            <Button
+            {/* <Button
               type="submit"
               fullWidth
               variant="contained"
@@ -69,7 +69,7 @@ export default function SignUp() {
               
             >
               Continue with Apple
-            </Button>
+            </Button> */}
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
@@ -137,19 +137,19 @@ export default function SignUp() {
               </Grid>
                 <div className='flex flex-col text-gray-400 py-2'>
                 <p className='flex items-center'> 
-                <input className='mr-2' type="radio"/> Hired
+                <input className='mr-2' type="radio"/> Client
                 </p>
               </div>
 
              <div className='flex flex-col text-gray-400 py-2'>
             <p className='flex items-center'> 
-            <input className='' type="radio"/> Job Seeker
+            <input className='' type="radio"/>Freelancer
             </p>
             </div>
               <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="yes i undersand and agree JobLinker terms and services including user agreement and privacy policy"
+                  label="Agree JobLinker terms and services  user agreement and privacy policy"
                 />
               </Grid>
             </Grid>
@@ -157,7 +157,7 @@ export default function SignUp() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2, bgcolor:"rgba(20, 161, 20, 0.658)" }}
             >
              Create Account
             </Button>
@@ -170,23 +170,10 @@ export default function SignUp() {
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
+        
       </Container>
     </ThemeProvider>
     </div>
-  );
-}
-
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
   );
 }
 

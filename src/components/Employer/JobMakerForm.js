@@ -46,9 +46,6 @@ const [qwo,setQwo]=useState()
 const [lang,setLang]=useState()
 const [attach,setAttach]=useState()
 
-
-
-
 const [selectDegree, setSelectDegree] = useState('high shool')
 const handleChange = (event) => {
   setSelectDegree(event.target.value);

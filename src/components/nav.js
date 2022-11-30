@@ -8,6 +8,7 @@ const adminItems = [
   { name: "Manage Candidates",path:'/cards'},
   { name: "Manage Posts" ,path:'/jobseeker'},
   { name: "Manage Employers",path:'/managerUser'},
+  { name: "Delete",path:'/Button'},
   
 ];
 
@@ -47,7 +48,7 @@ const Nav = () => {
        <Link to="/Admindash" >   <li className='mx-4 hover:text-teal-500 duration-500 cursor-pointer text-l md:ml-8 md:my-0 my-7 '>Dashboard</li></Link>
           <li className='mx-4 hover:text-teal-500 duration-500 cursor-pointer text-l md:ml-8 md:my-0 my-7'>Company Reviews</li>
           <li className='mx-4 hover:text-teal-500 duration-500 cursor-pointer text-l md:ml-8 md:my-0 my-7'>Find Salaries</li>
-          <li className='mx-4 hover:text-teal-500 duration-500 cursor-pointer text-l md:ml-8 md:my-0 my-7'><PersonIcon/>Profile</li>
+          <li className='mx-4 hover:text-teal-500 duration-500 cursor-pointer text-l md:ml-8 md:my-0 my-7'><PersonIcon/>Profile</li>   
           {/* <button className='bg-yellow-400	rounded-md py-2 px-6 md:ml-8 text-white'>Employers/Post a Job</button> */}
 
 

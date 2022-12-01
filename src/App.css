@@ -1,3 +1,7 @@
+* {
+  color: black
+}
+
 .App {
   text-align: center;
 }
@@ -32,15 +36,18 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-body{
+
+/* body {
   background: #F3F4F6;
-}
-.btn{
-  background-color: #b7d1ce;
+} */
+
+.btn {
+  background-color: #14B8A6;
   padding-left: 2rem;
   padding-right: 2rem;
   height: 3rem;
@@ -49,24 +56,29 @@ body{
   color: #fff;
 
 }
-label{
+
+label {
   position: absolute;
   left: 7.2rem;
   /* bottom: 18.2rem; */
 }
-select{
+
+select {
   outline: none;
 }
-h1{
+
+h1 {
   position: absolute;
   left: 18.5rem;
-  
+
 }
-.home{
+
+.home {
   margin-top: 5rem;
 }
-.icon1{
-  background-color: rgb(14,165,233);
+
+.icon1 {
+  background-color: rgb(14, 165, 233);
   width: 5rem;
   height: 5rem;
   padding: 2rem;
@@ -75,7 +87,8 @@ h1{
   border-radius: 0.4rem;
   margin-bottom: 3rem;
 }
-.icon2{
+
+.icon2 {
   width: 5rem;
   height: 5rem;
   padding: 2rem;
@@ -83,9 +96,10 @@ h1{
   margin-top: 3rem;
   border-radius: 0.4rem;
   margin-bottom: 3rem;
-  background-color: rgb(250,204,21);
+  background-color: rgb(250, 204, 21);
 }
-.icon3{
+
+.icon3 {
   width: 5rem;
   height: 5rem;
   padding: 2rem;
@@ -93,20 +107,21 @@ h1{
   margin-top: 3rem;
   border-radius: 0.4rem;
   margin-bottom: 3rem;
-  background-color: rgb(20,184,166);
+  background-color: rgb(20, 184, 166);
 }
-img{
-  margin-top:3rem ;
+
+img {
+  margin-top: 3rem;
   float: right;
   /* padding-top:2rem; */
 }
-h5{
-  /* position: relative; */
+
+h5 {
   padding-left: 4rem;
   padding-bottom: -10rem;
 }
-h6{
+
+h6 {
   position: absolute;
   padding-left: 4rem;
 }
-

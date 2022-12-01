@@ -29,7 +29,7 @@ const ContactUS = () => {
           ></iframe>
         </div>
         <br />
-        <br/>
+        <br />
         <div className="paragraphContact">
           <p>
             <span style={{ borderBottom: "24px" }}>Call now</span> or or chat
@@ -40,7 +40,7 @@ const ContactUS = () => {
             </span>
           </p>{" "}
           <br />
-          <br/>
+          <br />
         </div>
         <div
           style={{
@@ -51,13 +51,13 @@ const ContactUS = () => {
           }}
         >
           <div>
-            <h1 style={{ fontSize: "32px", fontWeight: "bold",textAlign:"start",color:"#63c49a" }}>
+            <h1 style={{ fontSize: "32px", fontWeight: "bold", textAlign: "start", color: "#63c49a" }}>
               Get in Touch
             </h1>
             <br />
-            <p style={{textAlign:"start"}}>Name</p>
+            <p style={{ textAlign: "start" }}>Name</p>
             <input></input>
-            <p style={{textAlign:"start"}}>Email</p>
+            <p style={{ textAlign: "start" }}>Email</p>
             <input></input> <br />
             <br />
             <div className="btnQ1 btn7">
@@ -84,16 +84,16 @@ const ContactUS = () => {
             </p>
           </div>
         </div>
-        <br/> <br/>
-        <div class="icons" style={{justifyContent:"center"}}>
-            <h4 style={{fontSize:"20px",fontWeight:"600"}} >Follow Us On</h4>
-              <GitHubIcon />
-              <InstagramIcon />
-              <GoogleIcon />
-              <LinkedInIcon />
-            </div>
+        <br /> <br />
+        <div class="icons" style={{ justifyContent: "center" }}>
+          <h4 style={{ fontSize: "20px", fontWeight: "600" }} >Follow Us On</h4>
+          <GitHubIcon />
+          <InstagramIcon />
+          <GoogleIcon />
+          <LinkedInIcon />
+        </div>
       </div>
-     
+
     </>
   );
 };

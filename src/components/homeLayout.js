@@ -1,14 +1,18 @@
-import React from "react";
-import Navbar from "./Navbar";
-import Footer from "./footer";
+import { Home } from '@mui/icons-material'
+import React from 'react'
+import Footer from './footer'
+import Navbar from './Navbar'
 
-const HomeLayout = (props) =>{
-    return(
-        <>
-        <Navbar />
-        <div style={{width:"100%",minHeight :"80vh",paddingTop:"36px"}}>{props.children}</div>
-        <Footer/>
-        </>
-    )
+const HomeLayout = (props) => {
+  return (
+    <div>
+      <Navbar />
+      <div style={{}}>{props.children}</div>
+
+      <Footer />
+
+    </div>
+  )
 }
+
 export default HomeLayout

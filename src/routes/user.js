@@ -1,5 +1,5 @@
 import React from "react";
-import {  Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import HomeLayout from "../components/homeLayout";
 const Index = () => {
   return (

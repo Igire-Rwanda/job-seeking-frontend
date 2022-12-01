@@ -7,4 +7,4 @@ export const loginService = async (data) =>{
         console.log("error:",err)
     }
 }
-// }
+// 

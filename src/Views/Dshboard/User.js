@@ -72,8 +72,8 @@ export default function ManagPostedJobs() {
     "ip_address": "211.8.50.110"
   },
 {
-  // key:"5",
-  title:"Actions",
+  key:"5",
+  // title:"Actions",
   render:(record)=>{
     return(
       <>

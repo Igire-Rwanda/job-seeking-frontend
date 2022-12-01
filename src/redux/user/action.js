@@ -22,4 +22,3 @@ export const loginAction= (data) => async  (dispatch) =>{
         console.log( "Error:" + error)
     }
 };
-// }

@@ -26,18 +26,21 @@ import UserAroutes from "./user";
 import User1routes from "./user1";
 import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
+
+import ManagPostedJobs from "../pages/ManagPostedJobs";
+import ModalContent from "../pages/ModalContent";
+
 import UserAppliations from "../Views/Dshboard/UserAppliations";
 
 import User from '../Views/Dshboard/User';
 
 import Profile from "../usersDashboard/profile";
 
-
 function App() {
   return (
     <Routes>
       <Route element={<UserAroutes />}>
-      
+
         <Route path="/contactUs" element={<ContactUS />} />
         <Route path="/jobs" element={<JobSearching />} />
         <Route path="/jobseeker" element={<JobSeeker />} />
@@ -56,8 +59,15 @@ function App() {
         <Route path="/Candidates" element={<Candidates />} />
         <Route path="/Billing" element={<Billing />} />
         <Route path="/aboutUs" element={<AboutUs />} />
- 
+        <Route path="/ReadMore" element={<ModalContent />} />
+
+
       </Route>
+
+      <Route >
+        <Route path="/postedJobs" element={<ManagPostedJobs />} />
+      </Route>
+
       <Route element={<User1routes />}>
         <Route path="/jobseeker" element={<JobSeeker />} />
       </Route>
@@ -66,10 +76,10 @@ function App() {
         <Route path="/applications" element={<UserAppliations />} />
       </Route>
 
-          
-          <Route>
-            <Route path="/users" element={<Profile />} />
-          </Route>
+
+      <Route>
+        <Route path="/users" element={<Profile />} />
+      </Route>
 
 
       <Route element={<Adminroutes />}>

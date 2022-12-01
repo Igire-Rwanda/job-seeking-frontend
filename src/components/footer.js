@@ -51,11 +51,11 @@ const Footer = () => {
           </div>
           <div class="ligne"></div>
           <div className="copyright">
-            <p >Copyright@2022 joLinker Inc </p>
-
-           
+            <div className="copy-paragraph">
+              <p >Copyright@2022 joLinker Inc </p>
+            </div>
             <div class="icons">
-            <h4>Follow Us On</h4>
+              <h4>Follow Us On</h4>
               <GitHubIcon />
               <InstagramIcon />
               <GoogleIcon />

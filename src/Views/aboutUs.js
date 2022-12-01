@@ -33,13 +33,13 @@ const AboutUs = () => {
           To empower the self-employed with the resources needed to achieve
           their vision.{" "}
         </p>
-        <br/>
+        <br />
         <h2>Vision</h2>
         <p>
           Every day, we clear the path for hourly workers to show them an easier
           way to the right-fit job or shift.
         </p>
-        <br/>
+        <br />
         <h2>Our Position</h2>
         <p>
           We stand with hourly employers and guide them to the best people,
@@ -56,15 +56,17 @@ const AboutUs = () => {
       </div>
       <div style={{ padding: "20px 80px" }}>
         <h2>Our team</h2>
-        <br/>
+        <br />
         <div style={{ display: "flex", gap: "40px" }}>
           <div>
             <img src={IngImage} alt="imageProfile"
-            style={{width:"300px"}}></img>
+              style={{ width: "300px" }}></img>
             <br />
-            <h1 style={{fontSize:"20px",
-          fontWeight:"800",color:"#63c49a"}}>Ingabire Immaculate</h1>
-          <br/>
+            <h1 style={{
+              fontSize: "20px",
+              fontWeight: "800", color: "#63c49a"
+            }}>Ingabire Immaculate</h1>
+            <br />
             <p>
               Immaculate is the Founder of joLinker Jobseeking platform.
               She coaches her clients through their marketing strategies
@@ -74,7 +76,7 @@ const AboutUs = () => {
               of success even if they seem beyond reach. ​ A firm believer in
               healthy work/life integration, Immaculate is committed to creating
               space for anyone, especially those with demanding lives, to enjoy
-              life. 
+              life.
             </p>
             <br />
             <div className="btnQB">
@@ -86,9 +88,11 @@ const AboutUs = () => {
             ></img>
             <br />
             <h1
-            style={{fontSize:"20px",
-            fontWeight:"800",color:"#63c49a"}}>Fiona Delice Nizeyimana</h1>
-             <br/>
+              style={{
+                fontSize: "20px",
+                fontWeight: "800", color: "#63c49a"
+              }}>Fiona Delice Nizeyimana</h1>
+            <br />
             <p>
               Fiona Delice is the Founder and owner of Browning Business
               Consulting. She collaborates with entrepreneurs and business
@@ -106,11 +110,13 @@ const AboutUs = () => {
           </div>
           <div>
             <img src={lydieImage} alt="imageProfile"
-         style={{width:"300px"}}></img>
+              style={{ width: "300px" }}></img>
             <br />
-            <h1 style={{fontSize:"20px",
-          fontWeight:"800",color:"#63c49a"}}>Lydie Muhawenimana</h1>
-          <br/>
+            <h1 style={{
+              fontSize: "20px",
+              fontWeight: "800", color: "#63c49a"
+            }}>Lydie Muhawenimana</h1>
+            <br />
             <p>
               Lydia is the Founder of the Writer’s Launchpad and a speaker on
               the arts and techniques of writing. She leads workshops is a
@@ -127,19 +133,19 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <div class="icons">
-            <h4>Follow Us On</h4>
-              <GitHubIcon />
-              <InstagramIcon />
-              <GoogleIcon />
-              <LinkedInIcon />
-            </div>
+          <h4>Follow Us On</h4>
+          <GitHubIcon />
+          <InstagramIcon />
+          <GoogleIcon />
+          <LinkedInIcon />
+        </div>
       </div>
-      <br/>
-     
-      
+      <br />
+
+
     </>
   );
 };

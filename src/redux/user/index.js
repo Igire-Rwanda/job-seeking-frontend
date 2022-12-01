@@ -1,22 +1,21 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-const authSlice = createSlice({
- name:"authentication",
- initialState:{token:"",user:{}, isFetching:false },
- reducers:{
-   login(state,action) {
-    state.token = action .payload?.data?.token;
-    state.user = action.payload?.data?.user;
-   },
-   setIsFetching(state,action){
-state.isFetching = action.payload;
-   },
- },
-
+const userSlice = createSlice({
+  name: "create-user",
+  initialState: {users:[], selectedUser: {}, isFetching: false },
+  reducers: {
+    setUsers(state, action) {
+      state.users = action?.payload?.data;
+    },
+    setSelectedUser(state, action) {
+      state.selectedUser = action?.payload;
+    },
+    setIsFetching(state, action) {
+      state.isFetching = action?.payload;
+    },
+  },
 });
 
+export const userActions = userSlice.actions;
 
-export const authActions = authSlice.actions;
-
-export default authSlice.reducer;
-
+export default userSlice.reducer;

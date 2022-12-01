@@ -1,11 +1,13 @@
-.contactTitle{
+.contactTitle {
     font-size: 32px;
-    color:#63c49a ;
+    color: #63c49a;
     font-weight: 700;
 }
-.paragraphContact{
+
+.paragraphContact {
     font-size: 20px;
 }
+
 .btn7 {
     width: 120px;
     padding: 6px auto;
@@ -14,7 +16,8 @@
     color: white;
     margin-left: 46px;
 }
-.spany{
+
+.spany {
     font-size: 18px;
     font-weight: 700;
     padding: 6px;

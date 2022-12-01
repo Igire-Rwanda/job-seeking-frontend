@@ -1,9 +1,10 @@
 
 
-import * as React from 'react';
+import React, {useEffect, useState} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
+import LoadingButton from '@mui/lab/LoadingButton';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -14,6 +15,9 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Fiona from "../assets/Image/Capture.PNG";
+import CreateUserAction from '../redux/user/actions';
+import {useDispatch, useSelector} from "react-redux";
+import { useNavigate } from 'react-router-dom';
 // import LockOutlinedIcon from '@mui/material/LockOutlined'
 
 export default function SignUp() {
@@ -25,10 +29,32 @@ export default function SignUp() {
       password: data.get('password'),
     });
   };
+  const dispatch = useDispatch();
+  const {isFetching} = useSelector ((state)=> state?.user);
+  //const navigate = useNavigate();
+   
+  const [firstname,setFirstname]=useState()
+  const [lastname,setLastname]=useState()
+  const [phone,setPhone]=useState()
+  const [email,setEmail]=useState()
+  const [username,setUname]=useState()
+  const [password,setPassword]=useState()
+  const [role,setRole]=useState()
+  //  const signup = () =>{
+  //   getAllUserAction({fullname,phone,email,username,password})(dispatch);
+  //  }
+
+  //  useEffect(()=>{
+  //   if(data){
+  //        navigate("/SignIn");
+  //   }
+  //  },[data])
+  
+
 
   return (
 
-    <div className='grid grid-cols-1 sm:grid-cols-2'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 z--1'>
       <div className='hidden sm:block'>
         <img  className='w-full h-full object-cover'src={Fiona} alt="Capture.PNG"/>
       </div>
@@ -51,14 +77,14 @@ export default function SignUp() {
             Sign up
           </Typography>
 
-          <Button 
+          {/* <Button 
               // type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 ,bgcolor:"magenta"}}
             >
               Continue with Instagram
-            </Button>
+            </Button> */}
           
 
             {/* <Button
@@ -72,35 +98,39 @@ export default function SignUp() {
             </Button> */}
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  autoComplete="given-name"
-                  name="firstName"
-                  required
-                  fullWidth
-                  id="firstName"
-                  label="First Name"
-                  autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
+             
+            <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
+                  id="firstname"
+                  label="firstname"
+                  name="firstname"
+                  autoComplete="firstname"
+                  onChange={(e)=>setFirstname(e.target.value)}
                 />
-              </Grid>
+                </Grid>
+                <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="lastname"
+                  label="lastname"
+                  name="lastname"
+                  autoComplete="lastname"
+                  onChange={(e)=>setLastname(e.target.value)}
+                />
+                </Grid>
+           
               <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
-                  id="Username"
-                  label="Username"
-                  name="Username"
-                  autoComplete="Username"
+                  id="phone"
+                  label="phone"
+                  name="phone"
+                  autoComplete="phone"
+                  onChange={(e)=>setPhone(e.target.value)}
                 />
                 </Grid>
               <Grid item xs={12}>
@@ -111,6 +141,7 @@ export default function SignUp() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  onChange={(e)=>setEmail(e.target.value)}
                 />
               </Grid>
               
@@ -118,24 +149,37 @@ export default function SignUp() {
                 <TextField
                   required
                   fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="new-password"
+                  name="username"
+                  label="username"
+                  type="username"
+                  id="username"
+                  autoComplete="username"
+                  onChange={(e)=>setUname(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
-                  id="location"
-                  label="Location Address"
-                  name="Location"
-                  autoComplete="Location"
+                  id="password"
+                  label="password"
+                  name="password"
+                  autoComplete="password"
+                  onChange={(e)=>setPassword(e.target.value)}
                 />
               </Grid>
-                <div className='flex flex-col text-gray-400 py-2'>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="role"
+                  label="role"
+                  name="role"
+                  autoComplete="role"
+                  onChange={(e)=>setRole(e.target.value)}
+                />
+              </Grid>
+                {/* <div className='flex flex-col text-gray-400 py-2'>
                 <p className='flex items-center'> 
                 <input className='mr-2' type="radio"/> Client
                 </p>
@@ -145,7 +189,7 @@ export default function SignUp() {
             <p className='flex items-center'> 
             <input className='' type="radio"/>Freelancer
             </p>
-            </div>
+            </div> */}
               <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
@@ -153,14 +197,20 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
-            <Button
+            <LoadingButton
+           // loading={isFetching}
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2, bgcolor:"rgba(20, 161, 20, 0.658)" }}
+              onClick={()=>{
+                console.log({firstname,lastname,phone,email,username,password})
+                CreateUserAction({firstname,lastname,phone,email,username,password})(dispatch) 
+               // signup();
+              }}
             >
              Create Account
-            </Button>
+            </LoadingButton>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="./SignUp.js" variant="body2">

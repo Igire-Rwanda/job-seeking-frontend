@@ -11,6 +11,7 @@ import fionaImage from "../components/Assets/images/fionaProfile.jpg";
 import lydieImage from "../components/Assets/images/lydiaProfile.jpg";
 import { Typography } from '@mui/material'
 const AboutUs = () => {
+  
   return (
     <>
       <div className="AboutUS">

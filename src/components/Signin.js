@@ -67,7 +67,7 @@ const FormData = () => {
 
    useEffect(()=>{
     if(token){
-      navigate("/");
+      navigate("/EmployeeForm");
     }
   },[token])
  const login=()=>{

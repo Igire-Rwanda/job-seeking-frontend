@@ -1,12 +1,15 @@
-import React,{useState} from 'react'
-import{Box,TextField ,Button,MenuItem} from '@mui/material'
-
+import React,{useState,useEffect} from 'react'
+import{Box,TextField ,Button,MenuItem} from '@mui/material';
+import {useDispatch,useSelector} from "react-redux";
+import {jobAction} from "../../redux/job/action";
+import LoadingButton from '@mui/lab/LoadingButton';
+import {useNavigate} from "react-router-dom"
 
 
   const Form = ()=> {
     const [inputs, setInputs] = useState({
- firstname: "",
- lastname: "",
+ companyLogo: "",
+ jobDeadLine: "",
  email: "",
  phone: "",
  password: "",
@@ -39,17 +42,33 @@ const degree = [
 
 ]
 
-const [firstname,setFname]=useState()
-const [lastname,setLname]=useState()
-const [desc,setDesc]=useState()
-const [qwo,setQwo]=useState()
-const [lang,setLang]=useState()
-const [attach,setAttach]=useState()
+const [companyLogo,setcompanyLogo]=useState()
+const [jobDeadLine,setjobDeadLine]=useState()
+const [jobTitle,setjobTitle]=useState()
+const [companyName,setcompanyName]=useState()
+const [jobDescription,setjobDescription]=useState()
+const [companyWebsite,setCompanyWebsite]=useState()
+const [jobRequirements,setJobRequirements]=useState()
+
+
+
 
 const [selectDegree, setSelectDegree] = useState('high shool')
 const handleChange = (event) => {
   setSelectDegree(event.target.value);
 };
+const navigate=useNavigate();
+const dispatch=useDispatch();
+const {token,isFetching} = useSelector((state)=>state?.job);
+
+useEffect(()=>{
+  if(token){
+    navigate("/");
+  }
+},[token])
+const jobCreate=()=>{
+  jobAction({companyLogo,jobDeadLine,jobTitle,companyName,jobDescription,companyWebsite,jobRequirements})(dispatch)
+}
 
 
   return (
@@ -72,24 +91,25 @@ const handleChange = (event) => {
       <TextField
       id="outlined-basic"
   // helperText="Please enter your First name"
-  name='firstname'
+  name='companyLogo'
+  type="file"
 
-  onChange={(e)=>setFname(e.target.value)}
-  label="company name"
+  onChange={(e)=>setcompanyLogo(e.target.value)}
+  
   variant="outlined"
+  helperText="Upload your logo Here"
 />
 
       </div>
       <div>
 
       <TextField
-          id="standard-textarea"
-          label="company Description"
-          type="text"
-          multiline
-          variant="standard"
-          onChange={(e)=>setDesc(e.target.value)}
-          
+          id="outlined-basic"
+         
+          type="date"
+          variant="outlined"
+          onChange={(e)=>setjobDeadLine(e.target.value)}
+          name="jobDeadLine"
       
         />
 </div>
@@ -100,12 +120,11 @@ const handleChange = (event) => {
 
 <TextField
    id="outlined-basic"
-    label="job Category"
-   
-    onChange={(e)=>setLang(e.target.value)}
+    label="Job Title"
+    onChange={(e)=>setjobTitle(e.target.value)}
     type="text"
     variant="outlined"
-   
+   name='jobTitle'
   />
        
 
@@ -113,12 +132,12 @@ const handleChange = (event) => {
 
 <div>
 <TextField
-          id="standard-textarea"
-          label="job decription"
+         id="outlined-basic"
+          label="Company Name"
           type="text"
-          multiline
-          variant="standard"
-          onChange={(e)=>setQwo(e.target.value)}
+          name='companyName'
+          variant="outlined"
+          onChange={(e)=>setcompanyName(e.target.value)}
           
         />
 </div>
@@ -128,18 +147,20 @@ const handleChange = (event) => {
 
 
 <TextField
-   id="outlined-basic"
-    label="company website"
+    id="standard-textarea"
+    label="Job Description"
    
-    onChange={(e)=>setLang(e.target.value)}
+    onChange={(e)=>setjobDescription(e.target.value)}
     type="text"
-    variant="outlined"
+    multiline
+    variant="standard"
+    name='jobDescription'
    
   />
        
 
 </div>
-
+{/* 
 <div>
 <TextField
     id="outlined-select-currency"
@@ -157,7 +178,7 @@ const handleChange = (event) => {
       </MenuItem>
     ))}
  </TextField>
-</div>
+</div> */}
 
 {/* <div className='file'>
  <input type='file' placeholder="upload image"
@@ -168,12 +189,50 @@ const handleChange = (event) => {
 
 
 
+
+<div>
+
+
+
+<TextField
+   id="outlined-basic"
+    label="Company Website"
+   
+    onChange={(e)=>setCompanyWebsite(e.target.value)}
+    type="text"
+    variant="outlined"
+    name='companyWebsite'
+   
+  />
+       
+
+</div>
+<div>
+
+
+
+<TextField
+     id="standard-textarea"
+    label="Job Requirements"
+   
+    onChange={(e)=>setJobRequirements(e.target.value)}
+    type="text"
+    multiline
+    variant="standard"
+    name='jobRequirements'
+   
+  />
+       
+
+</div>
+
 <div className='buto'>
-<Button variant="contained" type='submit' onClick={()=> {
-  console.log({firstname,lastname,desc,qwo,lang,attach})
+<LoadingButton loading={isFetching} variant="contained" type='submit' onClick={()=> {
+  jobCreate()
+  console.log({companyLogo,jobDeadLine,jobTitle,companyName,jobDescription,companyWebsite,jobRequirements})
 }}>
  Apply
-</Button>
+</LoadingButton>
 </div>
     </Box>
     </form>

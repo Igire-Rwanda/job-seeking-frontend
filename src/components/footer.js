@@ -52,7 +52,7 @@ const Footer = () => {
           <div class="ligne"></div>
           <div className="copyright">
             <div className="copy-paragraph">
-              <p >Copyright@2022 joLinker Inc </p>
+              <p >Copyright@2022 JoLinker Inc </p>
             </div>
             <div class="icons">
               <h4>Follow Us On</h4>

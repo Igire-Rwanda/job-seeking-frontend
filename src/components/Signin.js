@@ -5,7 +5,7 @@ import {
   Card,
   TextField,
   Stack,
-  Button, 
+  Button,
 } from "@mui/material";
 import Link from '@mui/material/Link';
 const styles = { width: "100%", height: "100vh" };
@@ -50,7 +50,7 @@ const FormData = () => {
             <Card sx={{ height: 420, padding: 3 }}>
               <Stack spacing={4} alignItems="center" justifyContent="center">
                 <div className=" md:pl-0 pl-9 font-bold text-2xl cursor-pointer flex items-center font-[poppins] text-gray-800">
-                  <span className="text-teal-500 mr-1 ">joLinker</span>
+                  <span className="text-teal-500 mr-1 ">JoLinker</span>
                 </div>
 
                 <TextField
@@ -60,31 +60,31 @@ const FormData = () => {
                   variant="filled"
                   onChange={(e) => setUserName(e.target.value)}
                 />
- 
+
                 <TextField fullWidth
-          id="filled-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-          variant="filled"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-                 <Link
-      component="button"
-      variant="body2"
-      onClick={() => {
-        console.info("I'm a button.");
-      }}
-    >
-      Forgot password?
-    </Link>
+                  id="filled-password-input"
+                  label="Password"
+                  type="password"
+                  autoComplete="current-password"
+                  variant="filled"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <Link
+                  component="button"
+                  variant="body2"
+                  onClick={() => {
+                    console.info("I'm a button.");
+                  }}
+                >
+                  Forgot password?
+                </Link>
                 <Button
                   fullWidth
                   variant="contained"
-                  sx={{ mt: 3, mb: 2, bgcolor:"rgba(20, 161, 20, 0.658)" }}
+                  sx={{ mt: 3, mb: 2, bgcolor: "rgba(20, 161, 20, 0.658)" }}
                   onClick={() => {
-                  console.log({userName,password})
-                  
+                    console.log({ userName, password })
+
                   }}
                 >
                   Signin

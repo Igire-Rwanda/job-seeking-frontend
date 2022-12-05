@@ -1,10 +1,13 @@
-
 import { configureStore } from "@reduxjs/toolkit";
-import profile from "./profile";
- 
+import auth from "./auth";
+import user from "./user";
+import job from './job';
 const store = configureStore({
     reducer: {
-        profile: profile,
+        auth:auth,
+        user: user,
+        job:job,
+       profile: profile,
     },
 });
 export default store;

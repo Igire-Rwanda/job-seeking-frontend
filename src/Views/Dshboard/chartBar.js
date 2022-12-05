@@ -73,7 +73,7 @@ export default function App() {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="income" fill="#44b4d2" />
+      <Bar dataKey="income" fill="#63c49a" />
       <Bar dataKey="users" fill="#82ca9d" />
     </BarChart>
   );

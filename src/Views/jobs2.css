@@ -2,6 +2,7 @@
   font-family: Arial, Helvetica, sans-serif;
   border-radius: box-sixing;
 
+
 }
 
 .JobTitles {
@@ -13,15 +14,16 @@
   padding: 20px;
 }
 
-.JobsContent {
+.JobsContent2 {
   display: flex;
   gap: 2rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .siderB {
   display: flex;
   gap: 2rem;
-  /* margin-bottom: 6px; */
 }
 
 .JobsPage {
@@ -60,11 +62,6 @@ input {
   background-color: rgb(244, 192, 217);
 }
 
-/* .Btn1{
-    padding: 10px 16px;
-    background-color: #FFD201;
-    border-radius: 10px;
-} */
 .JobsFooter {
   height: 120px;
   width: 100%;
@@ -77,9 +74,6 @@ input {
   left: 40%;
 }
 
-/* .Jobbutton p {
-  margin-left: 10px;
-} */
 .btn6 {
   background-color: black;
   padding: 5px 35px;
@@ -97,6 +91,8 @@ input {
 
 .h5 {
   font-weight: 600;
+  margin: 0;
+  padding: 0;
 }
 
 .h1 {
@@ -118,6 +114,7 @@ input {
   padding: 20px;
   text-align: start;
   transition: all 0.8s;
+  background-color: white;
 }
 
 .jobCard:hover {
@@ -151,10 +148,18 @@ input {
 }
 
 .btn3 {
-  padding: 5px 24px;
+  padding: 5px 10px;
   background-color: #63c49a;
   border-radius: 20px;
   border: 2px solid #63c49a;
+}
+
+.btn4 {
+  padding: 10px 70px;
+  background-color: #ffd201;
+  border-radius: 20px;
+  border: 2px solid #ffd201;
+  color: black;
 }
 
 .IconBtn {

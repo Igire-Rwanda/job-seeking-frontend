@@ -71,7 +71,7 @@ export default function App() {
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
-      <Area type="monotone" dataKey="Visitors" stroke="#8884d8" fill="#44b4d2" />
+      <Area type="monotone" dataKey="Visitors" stroke="#8884d8" fill="#63c49a" />
     </AreaChart>
   );
 }

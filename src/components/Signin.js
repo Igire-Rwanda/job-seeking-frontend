@@ -1,29 +1,56 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import{loginAction}from "../redux/auth/action";
+import {useDispatch,useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
+
+
+
+import LoadingButton from '@mui/lab/LoadingButton';
 import {
   Container,
+  Alert,
   Grid,
   Card,
   TextField,
   Stack,
   Button, 
+  InputAdornment,
+  FormControl,
+  InputLabel,
+  FilledInput,
+  IconButton,
 } from "@mui/material";
 import Link from '@mui/material/Link';
 const styles = { width: "100%", height: "100vh" };
+
+
+
+
+
 const FormData = () => {
-  const [userName, setUserName] = useState();
+  const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+
+ 
+  const navigate = useNavigate();
+
   // const login =()=>{
+
   //   loginAction({email,password})(dispatch);
+
   // }
+
+  
+  
   const [values, setValues] = React.useState({
     password: "",
     showPassword: false,
   });
 
   const handleChange = (prop) => (event) => {
+    setPassword(event.target.value);
     setValues({ ...values, [prop]: event.target.value });
   };
-
   const handleClickShowPassword = () => {
     setValues({
       ...values,
@@ -34,6 +61,20 @@ const FormData = () => {
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+
+  const dispatch = useDispatch();
+ const {token,isFetching} = useSelector((state)=>state?.auth);
+
+   useEffect(()=>{
+    if(token){
+      navigate("/EmployeeForm");
+    }
+  },[token])
+ const login=()=>{
+  loginAction({email,password})(dispatch)
+ }
+
+
 
   return (
     <>
@@ -56,11 +97,11 @@ const FormData = () => {
                 <TextField
                   fullWidth
                   id="filled-basic"
-                  label="User Name"
+                  label="Email"
                   variant="filled"
-                  onChange={(e) => setUserName(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
- 
+      
                 <TextField fullWidth
           id="filled-password-input"
           label="Password"
@@ -78,17 +119,18 @@ const FormData = () => {
     >
       Forgot password?
     </Link>
-                <Button
+                <LoadingButton
+                loading={isFetching}
                   fullWidth
                   variant="contained"
                   sx={{ mt: 3, mb: 2, bgcolor:"rgba(20, 161, 20, 0.658)" }}
                   onClick={() => {
-                  console.log({userName,password})
-                  
+                  console.log({email,password})
+                  login();
                   }}
                 >
                   Signin
-                </Button>
+                </LoadingButton>
               </Stack>
             </Card>
           </Grid>

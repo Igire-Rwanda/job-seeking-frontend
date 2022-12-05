@@ -7,6 +7,7 @@ const store = configureStore({
         auth:auth,
         user: user,
         job:job,
+       profile: profile,
     },
 });
 export default store;

@@ -112,7 +112,7 @@ const [selectDegree,setSelectDegree]=useState('high school')
 </Button> 
 <hr></hr>
          
-         <br/> <br/>
+         <br/> <br/><br/>
          
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

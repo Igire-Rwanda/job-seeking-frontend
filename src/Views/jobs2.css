@@ -212,3 +212,7 @@ input {
     display: inline-block;
   }
 }
+.make-flex{
+  display: flex !important;
+  flex-wrap: wrap !important;
+}

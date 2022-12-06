@@ -19,5 +19,57 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+Box{
+  background-color: brown;
+  height: 50%;
+  margin-top: 10%;
+  margin-left: 9%;
+  width: 65%;
+  position: absolute;
+}
+.container{
+  background-color: rgb(97, 100, 100);
+  width: 55%;
+  height: 70%;
+  margin-left: 20%;
+  margin-top: 2%;
+  padding: 5%;
+  border-radius:8px;
+  position: absolute;
+}
 
-
+.box{
+  background-color: rgb(188, 211, 211);
+  width: 70%;
+  height: 50%;
+  margin-left: 15%;
+  margin-top: 2%;
+  padding: 3% 1%;
+  border-radius:8px;
+}
+input{
+  margin-top: 5%;
+  padding: 8%;
+  margin-left: -4%;
+}
+/* .button{
+  color: rgb(171, 191, 214);
+  width: 25ch;
+  margin-left: 35%;
+  border-radius: none;
+} */
+h1{
+  margin-left: -10%;
+  margin-top: -5%;
+  font-size: 25px;
+  color: white;
+}
+.file{
+ 
+  margin-left: 10%;
+  margin-top: 2%;
+}
+.buto Button{
+  margin-left: 39%;
+  margin-top: 2%;
+}

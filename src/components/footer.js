@@ -1,9 +1,5 @@
-import React from "react";
-import "./footer.css";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import GoogleIcon from "@mui/icons-material/Google";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import React from 'react'
+
 const Footer = () => {
   return (
     <>

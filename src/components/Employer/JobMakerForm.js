@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import{Box,TextField ,Button,MenuItem} from '@mui/material';
 import {useDispatch,useSelector} from "react-redux";
-import {jobAction} from "../../redux/job/action";
+import {jobAction} from "../../redux/jobPost/action";
 import LoadingButton from '@mui/lab/LoadingButton';
 import {useNavigate} from "react-router-dom"
 

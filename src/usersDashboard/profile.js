@@ -8,7 +8,7 @@ import { CardActionArea } from '@mui/material';
 import './profile.css';
 import girl from "../img/girl.jpeg";
 import {IconButton, Button,TextField,MenuItem,Box} from '@mui/material';
-import {LoadingButton} from '@mui/lab/loadingButton';
+import {LoadingButton} from '@mui/lab/LoadingButton';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
 import { blueGrey, lightBlue, amber } from '@mui/material/colors';
 import {useDispatch,useSelector} from 'react-redux';

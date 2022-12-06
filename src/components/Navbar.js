@@ -4,7 +4,7 @@ import {link, NavLink} from 'react-router-dom'
 const Navbar = () => {
   return (
     <div>
-<nav className='shadow-md w-full fixed top-0 left-0 z-index-50'>
+<nav className='shadow-md w-full fixed top-0 left-0 z-40'>
       <div className='md:flex bg-white py-2 items-cennter justify-between md:px-20 mt:10'>
          <div className=' md:pl-0 pl-9 font-bold text-2xl cursor-pointer flex items-center font-[poppins] text-gray-800'>
            <span className='text-teal-500 mr-1 '>

@@ -73,7 +73,7 @@ export default function SignUp() {
           <Avatar sx={{ m: 1, bgcolor: 'primary' }}>
             {/* <LockOutlinedIcon /> */}
           </Avatar>
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" className='mt-5'  variant="h5">
             Sign up
           </Typography>
 

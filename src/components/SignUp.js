@@ -18,6 +18,7 @@ import Fiona from "../assets/Image/Capture.PNG";
 import CreateUserAction from '../redux/user/actions';
 import {useDispatch, useSelector} from "react-redux";
 import { useNavigate } from 'react-router-dom';
+
 // import LockOutlinedIcon from '@mui/material/LockOutlined'
 
 export default function SignUp() {
@@ -31,7 +32,7 @@ export default function SignUp() {
   };
   const dispatch = useDispatch();
   const {isFetching} = useSelector ((state)=> state?.user);
-  //const navigate = useNavigate();
+ // const navigate = useNavigate();
    
   const [firstname,setFirstname]=useState()
   const [lastname,setLastname]=useState()
@@ -40,13 +41,13 @@ export default function SignUp() {
   const [username,setUname]=useState()
   const [password,setPassword]=useState()
   const [role,setRole]=useState()
-  //  const signup = () =>{
-  //   getAllUserAction({fullname,phone,email,username,password})(dispatch);
-  //  }
+   //const signup = () =>{
+    //CreateUserAction({firstname,phone,email,username,password})(dispatch);
+   //}
 
   //  useEffect(()=>{
   //   if(data){
-  //        navigate("/SignIn");
+  //        navigate("/Signin");
   //   }
   //  },[data])
   
@@ -197,7 +198,9 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
+            
             <LoadingButton
+            
            // loading={isFetching}
               type="submit"
               fullWidth
@@ -206,11 +209,13 @@ export default function SignUp() {
               onClick={()=>{
                 console.log({firstname,lastname,phone,email,username,password})
                 CreateUserAction({firstname,lastname,phone,email,username,password})(dispatch) 
-               // signup();
+               //signup();
               }}
             >
              Create Account
+             
             </LoadingButton>
+           
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="./SignUp.js" variant="body2">

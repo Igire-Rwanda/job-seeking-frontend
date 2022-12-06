@@ -1,5 +1,5 @@
 
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -8,15 +8,33 @@ import { CardActionArea } from '@mui/material';
 import './profile.css';
 import girl from "../img/girl.jpeg";
 import {IconButton, Button,TextField,MenuItem,Box} from '@mui/material';
+import {LoadingButton} from '@mui/lab/LoadingButton';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
-import { blueGrey, lightBlue } from '@mui/material/colors';
+import { blueGrey, lightBlue, amber } from '@mui/material/colors';
+import {useDispatch,useSelector} from 'react-redux';
+import {CreateProfileAction} from "../redux/profile/action";
 import { useForm } from 'react-hook-form'
+import EditIcon from '@mui/icons-material/Edit';
+import { Navigate } from 'react-router-dom';
+import { profileActions } from '../redux/profile';
 
 
 
 
 
 export default function Profile() {
+  const dispatch=useDispatch();
+
+  
+  const { isFetching } = useSelector((state) => state.profile);
+  // useEffect(()=>{
+  //   if(token){
+  //     Navigate("/")
+  //   }
+;  // },[token])
+  const profile=()=>{
+    profileActions({address,selectDegree,yearsOfExperience,SpokenLanguages,skills,country,LinkedlnProfile})(dispatch)
+  }
 
   
 
@@ -53,31 +71,23 @@ const [selectDegree,setSelectDegree]=useState('high school')
     const handleChange = (event) => {
       setSelectDegree(event.target.value);
     };
-  const [fName,setFname]=useState()
-  const [lName,setLname]=useState()
-  const [email,setEmail]=useState()
-  const [pNumber,setPnumber]=useState()
+  
+  
   const [address,setAddress]=useState()
-  const [experience, setExperience]=useState()
-  const [language, setLanguage]=useState()
+  const [yearsOfExperience, setYearsOfExperience]=useState()
+  const [SpokenLanguages, setSpokenLanguages]=useState()
   const [skills,setSkills]=useState()
   const [country,setCountry]=useState()
+  const [LinkedlnProfile,setLinkedlnProfile]=useState()
 
 
 
-
-
-
-
-
-  
-    
 
 
   return (
     <div>
 
-    <Card sx={{ maxWidth: 1250,margin:10 }}>
+    <Card sx={{ maxWidth: 1250,margin:10, backgroundColor:amber}}>
       <CardActionArea>
      
                <Button  component="label">
@@ -85,7 +95,7 @@ const [selectDegree,setSelectDegree]=useState('high school')
         //   component="img"
         //   height="140"
         >
-          <img src={girl} style={{width:120,height:115,borderRadius:50,marginLeft:350,marginTop:40}}/>
+          <img src={girl} style={{width:120,height:115,borderRadius:50,marginLeft:260,marginTop:40}}/>
           <input  hidden accept="image/*" multiple type="file" />
          {/*   */}
 
@@ -102,7 +112,7 @@ const [selectDegree,setSelectDegree]=useState('high school')
 </Button> 
 <hr></hr>
          
-         <br/> <br/>
+         <br/> <br/><br/>
          
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -116,16 +126,22 @@ const [selectDegree,setSelectDegree]=useState('high school')
       
 
             <div className='inputs'>
-            <TextField fullWidth id="outlined-basic" label="FirstName" variant="outlined" onChange={(e)=>setFname(e.target.value)}/>
-            <TextField fullWidth id="outlined-basic" label="LastName" variant="outlined" onChange={(e)=>setLname(e.target.value)} />
-            <TextField fullWidth id="outlined-basic" label="Email" variant="outlined" onChange={(e)=>setEmail(e.target.value)} />
+            
             <TextField fullWidth id="outlined-basic" label="Address" variant="outlined" onChange={(e)=>setAddress(e.target.value)} />
-            <TextField fullWidth id="outlined-basic" label="PhoneNumber" variant="outlined" onChange={(e)=>setPnumber(e.target.value)} />
-            <TextField fullWidth id="outlined-basic" label="Years of experience" variant="outlined" onChange={(e)=>setExperience(e.target.value)} />
-            <TextField fullWidth id="outlined-basic" label="Language Spoken" variant="outlined" onChange={(e)=>setLanguage(e.target.value)} />
+            <TextField fullWidth id="outlined-basic" label="Years of experience" variant="outlined" onChange={(e)=>setYearsOfExperience(e.target.value)} />
+            <TextField fullWidth id="outlined-basic" label="Language Spoken" variant="outlined" onChange={(e)=>setSpokenLanguages(e.target.value)} />
             <TextField fullWidth id="outlined-basic" label="Skills you have" variant="outlined" onChange={(e)=>setSkills(e.target.value)} />
             <TextField fullWidth id="outlined-basic" label="Country" variant="outlined" onChange={(e)=>setCountry(e.target.value)} />
-
+            <TextField fullWidth id="outlined-basic" label="LinkedlnProfile" variant="outlined" onChange={(e)=>setLinkedlnProfile(e.target.value)} />
+         
+            {/* <Button variant="contained" component="label">
+                 Upload your CV
+            <input hidden accept="image/*" multiple type="file" />
+          </Button>
+          <IconButton color="primary" aria-label="upload picture" component="label">
+          <input hidden accept="image/*" type="file" />
+          <PhotoCamera />
+          </IconButton> */}
 
 
                 
@@ -176,20 +192,20 @@ const [selectDegree,setSelectDegree]=useState('high school')
         />
         </div> */}
         </Box>  
-            <input type='file' placeholder='upload your CV' /> 
-    
-
+           
+  
 
             <div id="butt" > 
-            <Button 
-
+            <LoadingButton 
+loading={isFetching}
                onClick={() => {
-               console.log({fName,lName,email,address,pNumber,selectDegree,experience,language,skills,country})
+                profile();
+               console.log({address,selectDegree,yearsOfExperience,SpokenLanguages,skills,country,LinkedlnProfile})
              }}
              
               >
                 <b>Save</b>
-            </Button>
+            </LoadingButton>
             </div>
             {/* <div id="butto">
             <Button 

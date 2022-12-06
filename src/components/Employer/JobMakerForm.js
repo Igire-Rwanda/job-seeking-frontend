@@ -27,17 +27,21 @@ const handleSubmit = (e) => {
 
 const degree = [
   {
-    value: 'High school',
-    label: 'Home'
+    value: 'office',
+    label: 'Office'
   },
   {
-    value: 'diploma',
+    value: 'remote',
     label: 'Remote'
   },
  
 {
-  value: 'under graduate',
-  label: 'Office'
+  value: 'parttime',
+  label: 'PartTime'
+},
+{
+  value: 'fulltime',
+  label: 'FullTime'
 }
 
 ]
@@ -49,11 +53,12 @@ const [companyName,setcompanyName]=useState()
 const [jobDescription,setjobDescription]=useState()
 const [companyWebsite,setCompanyWebsite]=useState()
 const [jobRequirements,setJobRequirements]=useState()
+const [emplomentMode,setEmplomentMode]=useState()
 
 
 
 
-const [selectDegree, setSelectDegree] = useState('high shool')
+const [selectDegree, setSelectDegree] = useState('home','remote','parttime','fulltime')
 const handleChange = (event) => {
   setSelectDegree(event.target.value);
 };
@@ -105,11 +110,12 @@ const jobCreate=()=>{
 
       <TextField
           id="outlined-basic"
-         
           type="date"
           variant="outlined"
           onChange={(e)=>setjobDeadLine(e.target.value)}
           name="jobDeadLine"
+          helperText="Enter Job DeadLine"
+
       
         />
 </div>
@@ -160,25 +166,8 @@ const jobCreate=()=>{
        
 
 </div>
-{/* 
-<div>
-<TextField
-    id="outlined-select-currency"
-    select
-    label="Vacancy type"
-    name='diplome'
-    
-    onChange={handleChange}
-    value={selectDegree}
 
-    >
-    {degree.map((option) => (
-      <MenuItem key={option.value} value={option.value}>
-        {option.label}
-      </MenuItem>
-    ))}
- </TextField>
-</div> */}
+
 
 {/* <div className='file'>
  <input type='file' placeholder="upload image"
@@ -226,10 +215,30 @@ const jobCreate=()=>{
 
 </div>
 
+
+<div>
+<TextField
+    id="outlined-select-currency"
+    select
+    label=" Emploment Mode"
+    name='emplomentMode'
+    
+    onChange={handleChange}
+    value={selectDegree}
+
+    >
+    {degree.map((option) => (
+      <MenuItem key={option.value} value={option.value}>
+        {option.label}
+      </MenuItem>
+    ))}
+ </TextField>
+</div> 
+
 <div className='buto'>
 <LoadingButton loading={isFetching} variant="contained" type='submit' onClick={()=> {
   jobCreate()
-  console.log({companyLogo,jobDeadLine,jobTitle,companyName,jobDescription,companyWebsite,jobRequirements})
+  console.log({companyLogo,jobDeadLine,jobTitle,companyName,jobDescription,companyWebsite,jobRequirements,emplomentMode})
 }}>
  Apply
 </LoadingButton>

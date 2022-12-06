@@ -2,13 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const jobSlice = createSlice({
   name:"create-job",
-  initialState: { token: "", job:{}, isFetching: false },
+  initialState: {job:{}, isFetching: false },
   reducers: {
     createJob(state, action) {
-      state.token=action?.payload?.data?.token;
+   
       state.job=action?.payload?.data;
     },
-   
+
     setIsFetching(state, action) {
       state.isFetching = action.payload;
     }

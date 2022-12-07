@@ -53,7 +53,7 @@ useEffect(() => {
           </select>
           <span className='flex'> {job}</span>
 
-          <button className='btn'>Find Jobs</button>
+          <NavLink to='/jobseeker'><button className='btn'>Find Jobs</button></NavLink>
         </div>
 
 

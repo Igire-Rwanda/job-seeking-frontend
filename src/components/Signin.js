@@ -63,13 +63,13 @@ const FormData = () => {
   };
 
   const dispatch = useDispatch();
- const {token,isFetching} = useSelector((state)=>state?.auth);
+ const {user,isFetching} = useSelector((state)=>state?.auth);
 
    useEffect(()=>{
-    if(token){
-      navigate("/EmployeeForm");
+    if(user?.role==="Talent"){
+      navigate("/");
     }
-  },[token])
+  },[user])
  const login=()=>{
   loginAction({email,password})(dispatch)
  }
@@ -125,8 +125,9 @@ const FormData = () => {
                   variant="contained"
                   sx={{ mt: 3, mb: 2, bgcolor:"rgba(20, 161, 20, 0.658)" }}
                   onClick={() => {
+                    login();
                   console.log({email,password})
-                  login();
+              
                   }}
                 >
                   Signin

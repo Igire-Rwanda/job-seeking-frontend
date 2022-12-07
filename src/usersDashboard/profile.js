@@ -8,7 +8,7 @@ import { CardActionArea } from '@mui/material';
 import './profile.css';
 import girl from "../img/girl.jpeg";
 import {IconButton, Button,TextField,MenuItem,Box} from '@mui/material';
-import {LoadingButton} from '@mui/lab/LoadingButton';
+import LoadingButton from '@mui/lab/LoadingButton';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
 import { blueGrey, lightBlue, amber } from '@mui/material/colors';
 import {useDispatch,useSelector} from 'react-redux';
@@ -95,7 +95,7 @@ const [selectDegree,setSelectDegree]=useState('high school')
         //   component="img"
         //   height="140"
         >
-          <img src={girl} style={{width:120,height:115,borderRadius:50,marginLeft:260,marginTop:40}}/>
+          <img src={girl} style={{width:120,height:115,borderRadius:50,marginLeft:280,marginTop:40}}/>
           <input  hidden accept="image/*" multiple type="file" />
          {/*   */}
 

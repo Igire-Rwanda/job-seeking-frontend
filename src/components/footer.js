@@ -1,4 +1,5 @@
-import React from "react";
+
+import React from 'react'
 import "./footer.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";

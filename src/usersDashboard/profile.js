@@ -8,7 +8,8 @@ import { CardActionArea } from '@mui/material';
 import './profile.css';
 import girl from "../img/girl.jpeg";
 import {IconButton, Button,TextField,MenuItem,Box} from '@mui/material';
-import {LoadingButton} from '@mui/lab/LoadingButton';
+import LoadingButton from '@mui/lab/LoadingButton';
+
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
 import { blueGrey, lightBlue, amber } from '@mui/material/colors';
 import {useDispatch,useSelector} from 'react-redux';
@@ -192,14 +193,17 @@ const [selectDegree,setSelectDegree]=useState('high school')
         />
         </div> */}
         </Box>  
-           
+        <Button variant="contained" component="label">
+                     Upload your CV
+                   <input hidden accept="image/*" multiple type="file" />
+                </Button>
   
 
             <div id="butt" > 
             <LoadingButton 
 loading={isFetching}
                onClick={() => {
-                profile();
+                // profile();
                console.log({address,selectDegree,yearsOfExperience,SpokenLanguages,skills,country,LinkedlnProfile})
              }}
              
@@ -207,15 +211,9 @@ loading={isFetching}
                 <b>Save</b>
             </LoadingButton>
             </div>
-            {/* <div id="butto">
-            <Button 
-               onClick={() => {
-            //    alert('clicked');
-              }}
-                >
-                <b>Update</b>
-            </Button>
-            </div> */}
+                
+                
+            
             </div>
             
           </Typography>

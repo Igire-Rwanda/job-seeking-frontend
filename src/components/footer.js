@@ -1,5 +1,7 @@
 import React from 'react'
-
+import "./footer.css";
+// import footer.css from "components"
+// import { GitHubIcon, InstagramIcon, GoogleIcon, LinkedInIcon } from "/../../components/footer";
 const Footer = () => {
   return (
     <>
@@ -52,10 +54,10 @@ const Footer = () => {
             </div>
             <div class="icons">
               <h4>Follow Us On</h4>
-              <GitHubIcon />
+              {/* <GitHubIcon />
               <InstagramIcon />
               <GoogleIcon />
-              <LinkedInIcon />
+              <LinkedInIcon /> */}
             </div>
           </div>
         </div>

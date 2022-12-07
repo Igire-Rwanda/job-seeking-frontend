@@ -20,6 +20,7 @@ const adminItems = [
   // { name: "", icon: <PeopleAltIcon />, path: "/cards" },
   { name: "Manage Posts", icon: <DraftsIcon />, path: "/Post" },
   // { name: "", icon: <InboxIcon />, path: "/managerUser" },
+
   { name: "Settings", icon: <SettingsIcon /> },
   { name: "Help", icon: <ContactSupportIcon /> },
 ];

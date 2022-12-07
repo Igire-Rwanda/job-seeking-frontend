@@ -1,0 +1,35 @@
+[
+    
+        {
+            "Company":"RBA",
+            "JobName":"Editor",
+            "ApplicationDate":"23/5/2022",
+            "Status":"Not shortlised"
+        },
+        {
+            "Company":"RIB",
+            "JobName":"agent",
+            "ApplicationDate":"10/6/2022",
+            "Status":"Not shortlised"
+        },
+        {
+            "Company":"RSSB",
+            "JobName":"Officer",
+            "ApplicationDate":"23/9/2022",
+            "Status":"Shortlised"
+        },
+        {
+            "Company":"RRA",
+            "JobName":"Account",
+            "ApplicationDate":"30/10/2022",
+            "Status":"pending"
+        },
+        {
+            "Company":"REG",
+            "JobName":"Manager",
+            "ApplicationDate":"5/11/2022",
+            "Status":"pending"
+        }
+
+    
+]

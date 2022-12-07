@@ -1,84 +1,108 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+    margin: 1;
+    padding: 1;
     box-sizing: border-box;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.footer{
-    background-color: #63C49A;
+
+.footer {
+    background-color: #63c49a;
+    margin-top: 50px;
 }
-.footerBar{
+
+.footerBar {
     display: flex;
     justify-content: space-around;
-   
-    /* height: 300px; */
-    padding-top:2rem;
+
+    height: 300px;
+    padding-top: 2rem;
 }
-.button{
+
+.button {
     padding: 10px 30px;
     background-color: #FACC15;
     border-radius: 30px;
 }
-.jolinker{
+
+.jolinker {
     padding-top: 40px;
 }
-.icons{
+
+.icons {
     display: flex;
     gap: 16px;
-   
+}
 
-}
-.copyright{
-    padding: 40px;
+.copyright {
+    padding: 30px;
     display: flex;
-    margin:0 40px;
     justify-content: space-between;
-   
+    width: 90%;
+    margin: 0 auto;
 }
-.ligne{
+
+.copy-paragraph {
+    margin: 0;
+}
+
+.copy-paragraph p {
+    margin: 0;
+    padding: 0;
+}
+
+.ligne {
     /* width: 90%; */
     height: 1px;
     background-color: gray;
     margin: 20px 80px 0 80px;
 }
-input{
+
+input {
     padding: 5px 30px;
     border: 1px solid gray;
-   
+
 }
-h3{
+
+h3 {
     font-weight: 700;
 }
-h2{
+
+h2 {
     font-size: 24px;
     font-weight: bold;
 }
-.jobItem ul li{
+
+.jobItem ul li {
     padding: 8px;
 }
+
 @media (max-width:850px) {
-    h2{
+    h2 {
         font-size: 20px;
     }
 }
+
 @media (max-width:680px) {
-    .footerBar{
+    .footerBar {
         display: inline-block;
         height: 100%;
-        
+
     }
-    h2{
+
+    h2 {
         font-size: 24px;
     }
 }
+
 @media (max-width:890px) {
-    h2{
+    h2 {
         font-size: 18px;
-        
+
     }
-    p{
+
+    p {
         font-size: 14px;
-        
+
     }
-    
+
 }

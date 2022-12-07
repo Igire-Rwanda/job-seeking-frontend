@@ -32,7 +32,7 @@ const countries = [
   { code: "Ta", label: "Tanzania", phone: "255" },
   { code: "AT", label: "Austria", phone: "43" },
 ];
-const top100Films = [
+const topJobCategories = [
   { title: "Software Developer", year: 1994 },
   { title: "Full Stack Engineer", year: 1972 },
   { title: "Electrical Engineer", year: 1974 },
@@ -47,7 +47,7 @@ const JobSearching = () => {
       
       <div class="contentDivision">
       <div className="jobContainers">
-      <h1 style={{ fontSize: "28px", fontWeight: "800"}}>
+      <h1 style={{ position:"relative",left:"2rem",fontSize: "28px", fontWeight: "800"}}>
         Welcome!
       </h1>
       <br/>
@@ -149,3 +149,5 @@ const JobSearching = () => {
   );
 };
 export default JobSearching;
+         
+      

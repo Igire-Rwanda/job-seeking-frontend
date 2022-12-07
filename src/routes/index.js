@@ -5,8 +5,9 @@ import UserLayout from "../Views/Dshboard/Userdashboard";
 import JobCards from "../components/jobCard";
 import AdminChart from "../Views/Dshboard/AdminChart";
 import Adminroutes from "./admin";
-import DataTable from "../Views/Dshboard/managerUsers";
+import ManageUser from "../Views/Dshboard/managerUsers";
 import JobSeeker from "../Views/Dshboard/jobSeekerDash";
+import DataTable from "../Views/Dshboard/managerUsers";
 import Home from "../pages/Home";
 import Navbar from "../components/Navbar";
 import SignIn from "../components/Signin";
@@ -26,6 +27,8 @@ import UserAroutes from "./user";
 import User1routes from "./user1";
 import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
+import Post from "../Views/Dshboard/Post"
+import JobMakerForm from "../components/Employer/JobMakerForm"
 
 import ManagPostedJobs from "../pages/ManagPostedJobs";
 import ModalContent from "../pages/ModalContent";
@@ -69,13 +72,21 @@ function App() {
       </Route>
 
       <Route element={<User1routes />}>
-        <Route path="/jobseeker" element={<JobSeeker />} />
+        <Route path="/Post" element={<Post />} />
       </Route>
 
       <Route>
         <Route path="/applications" element={<UserAppliations />} />
       </Route>
 
+          
+      <Route >
+        <Route path="/EmployeeForm" element={<JobMakerForm/>} />
+      </Route>
+
+          <Route>
+            <Route path="/users" element={<Profile />} />
+          </Route>
 
       <Route>
         <Route path="/users" element={<Profile />} />

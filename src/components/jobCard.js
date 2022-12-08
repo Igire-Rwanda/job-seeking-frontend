@@ -1,5 +1,6 @@
 import React from "react";
 import jobs from './Assets/Jobs.json';
+import { NavLink } from "react-router-dom";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 const JobCards = () => {
   return (
@@ -18,7 +19,7 @@ const JobCards = () => {
           </div>
           <br />
           <div className="siderB">
-            <button className="btn3">APPLY ON COMPANY SITE</button>
+            <NavLink to="/ReadMore"><button className="btn3">APPLY ON COMPANY SITE</button></NavLink>
             <div className="IconBtn">
               <FavoriteBorderIcon />
             </div>

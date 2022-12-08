@@ -96,7 +96,7 @@ const [selectDegree,setSelectDegree]=useState('high school')
         //   component="img"
         //   height="140"
         >
-          <img src={girl} style={{width:120,height:115,borderRadius:50,marginLeft:260,marginTop:40}}/>
+          <img src={girl} style={{width:120,height:115,borderRadius:50,marginLeft:350,marginTop:60}}/>
           <input  hidden accept="image/*" multiple type="file" />
          {/*   */}
 
@@ -117,7 +117,7 @@ const [selectDegree,setSelectDegree]=useState('high school')
          
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            <span>Build Your Profile</span>
+            <span id="mytitle"> Build Your Profile</span>
           </Typography>
           <Typography variant="body2" color="text.secondary">
 
@@ -143,8 +143,6 @@ const [selectDegree,setSelectDegree]=useState('high school')
           <input hidden accept="image/*" type="file" />
           <PhotoCamera />
           </IconButton> */}
-
-
                 
             <Box
               component="form"
@@ -174,7 +172,7 @@ const [selectDegree,setSelectDegree]=useState('high school')
         </div>
         </Box>
 
-        <Box
+        {/* <Box
       component="form"
       sx={{
         '& .MuiTextField-root': { m: 1, width: '25ch' },
@@ -182,6 +180,7 @@ const [selectDegree,setSelectDegree]=useState('high school')
       noValidate
       autoComplete="off"
     >
+      </Box>   */}
       {/* <div>
         <TextField
           id="outlined-multiline-flexible"
@@ -192,23 +191,27 @@ const [selectDegree,setSelectDegree]=useState('high school')
           onChange={handleChange}
         />
         </div> */}
-        </Box>  
-        <Button variant="contained" component="label">
+        
+        <Button variant="contained" component="label"
+        sx={{height:60, width:200}}>
                      Upload your CV
                    <input hidden accept="image/*" multiple type="file" />
                 </Button>
   
 
             <div id="butt" > 
-            <LoadingButton 
-loading={isFetching}
+            <LoadingButton className="save"
+            
+               loading={isFetching}
                onClick={() => {
                 // profile();
                console.log({address,selectDegree,yearsOfExperience,SpokenLanguages,skills,country,LinkedlnProfile})
              }}
              
               >
+        
                 <b>Save</b>
+            
             </LoadingButton>
             </div>
                 

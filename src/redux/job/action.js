@@ -1,16 +1,16 @@
 import { jobActions } from "./index";
-import { createJobService } from "./service";
+import { getAllJobService } from "./services";
 
-export const jobAction = (data) => async (dispatch) => {
+export const getAllJobAction = () => async (dispatch) => {
     dispatch(jobActions.setIsFetching(true));
     try {
-        const res = await createJobService(data);
+        const res = await getAllJobService();
         if(res?.status===200){
             dispatch(jobActions.setIsFetching(false));
-            dispatch(jobActions.login(res?.data));
+            dispatch(jobActions.setJobs(res?.data));
         }
         dispatch(jobActions.setIsFetching(false));
-    } catch (error) {
-        console.log("Error: " + error)
+    } catch(error){
+        console.log("error: " + error)
     }
 };

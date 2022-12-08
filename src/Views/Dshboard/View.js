@@ -15,7 +15,7 @@ export default function AlignItemsList() {
           <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Brunch this weekend?"
+          primary="Name"
           secondary={
             <React.Fragment>
               <Typography
@@ -24,9 +24,10 @@ export default function AlignItemsList() {
                 variant="body2"
                 color="text.primary"
               >
-                Ali Connors
+                Snow Jon
+                
               </Typography>
-              {" — I'll be in your neighborhood doing errands this…"}
+              {""}
             </React.Fragment>
           }
         />
@@ -37,7 +38,7 @@ export default function AlignItemsList() {
           <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Summer BBQ"
+          // primary="Summer BBQ"
           secondary={
             <React.Fragment>
               <Typography
@@ -46,9 +47,9 @@ export default function AlignItemsList() {
                 variant="body2"
                 color="text.primary"
               >
-                to Scott, Alex, Jennifers
+                Post Name
               </Typography>
-              {" — Wish I could come, but I'm out of town this…"}
+              {" — Back-end Developer"}
             </React.Fragment>
           }
         />
@@ -59,7 +60,7 @@ export default function AlignItemsList() {
           <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Oui Oui"
+          // primary="Oui Oui"
           secondary={
             <React.Fragment>
               <Typography
@@ -68,9 +69,9 @@ export default function AlignItemsList() {
                 variant="body2"
                 color="text.primary"
               >
-                Sandra Adams
+                Date
               </Typography>
-              {' — Do you have Paris recommendations? Have you ever…'}
+              {' — Sep 12th, 2021'}
             </React.Fragment>
           }
         />

@@ -5,10 +5,10 @@ const userSlice = createSlice({
   initialState: {users:[], selectedUser: {}, isFetching: false },
   reducers: {
     setUsers(state, action) {
-      state.users = action?.payload?.data;
+      state.users = action?.payload;
     },
-    setSelectedUser(state, action) {
-      state.selectedUser = action?.payload;
+    setSelectedUser(state, action) {   
+      state.selectedUser = action?.payload?.data;
     },
     setIsFetching(state, action) {
       state.isFetching = action?.payload;

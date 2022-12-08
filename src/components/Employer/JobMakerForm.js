@@ -58,7 +58,7 @@ const [emplomentMode,setEmplomentMode]=useState()
 
 
 
-const [selectDegree, setSelectDegree] = useState('home','remote','parttime','fulltime')
+const [selectDegree, setSelectDegree] = useState('home')
 const handleChange = (event) => {
   setSelectDegree(event.target.value);
 };
@@ -214,8 +214,6 @@ const jobCreate=()=>{
        
 
 </div>
-
-
 <div>
 <TextField
     id="outlined-select-currency"
@@ -238,7 +236,7 @@ const jobCreate=()=>{
 <div className='buto'>
 <LoadingButton loading={isFetching} variant="contained" type='submit' onClick={()=> {
   jobCreate()
-  console.log({companyLogo,jobDeadLine,jobTitle,companyName,jobDescription,companyWebsite,jobRequirements,emplomentMode})
+  console.log({companyLogo,jobDeadLine,jobTitle,companyName,jobDescription,companyWebsite,jobRequirements,selectDegree})
 }}>
  Apply
 </LoadingButton>

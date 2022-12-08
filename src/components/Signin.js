@@ -66,6 +66,8 @@ const FormData = () => {
  const {user,isFetching} = useSelector((state)=>state?.auth);
 
    useEffect(()=>{
+
+    if(token){
     if(user?.role==="Talent"){
       navigate("/");
     }
@@ -73,8 +75,6 @@ const FormData = () => {
  const login=()=>{
   loginAction({email,password})(dispatch)
  }
-
-
 
   return (
     <>

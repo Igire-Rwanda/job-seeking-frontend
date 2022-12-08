@@ -1,6 +1,8 @@
 
 import React from 'react'
+import  "./footer.css";
 import "./footer.css";
+
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
@@ -63,7 +65,7 @@ const Footer = () => {
               <InstagramIcon />
               <GoogleIcon />
               <LinkedInIcon />
-            </div>
+            </div> 
           </div>
         </div>
       </div>

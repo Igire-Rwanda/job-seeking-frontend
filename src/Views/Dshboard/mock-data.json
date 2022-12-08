@@ -1,0 +1,39 @@
+
+
+[
+    {
+      "id": 1,
+      "fullName": "Verace",
+      "address": "Milan/Italy",
+      "phoneNumber": "333-962-7516",
+      "email": "versaceitaliano@email.com"
+    },
+    {
+      "id": 2,
+      "fullName": "UN Organisation",
+      "address": "Washington D.C/USA",
+      "phoneNumber": "011-211-7516",
+      "email": "UNO@email.com"
+    },
+    {
+      "id": 3,
+      "fullName": "Amazon ",
+      "address": "Newyork/USA",
+      "phoneNumber": "788-962-7516",
+      "email": "amazon.org@email.com"
+    },
+    {
+      "id": 4,
+      "fullName": "tyler perry stutios",
+      "address": "mechigan/USA",
+      "phoneNumber": "011-962-111",
+      "email": "tylerperry@email.com"
+    },
+    {
+      "id": 5,
+      "fullName": "Netflix",
+      "address": "Atlanta/USA",
+      "phoneNumber": "3231-962-7516",
+      "email": "etflixpresent@email.com"
+    }
+  ]

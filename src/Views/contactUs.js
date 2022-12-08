@@ -74,7 +74,7 @@ const ContactUS = () => {
               <span className="spany">Phone: </span> +250786024528
             </p>
             <p>
-              <span className="spany">Email:</span> joLinker@gmail.com
+              <span className="spany">Email:</span> JoLinker@gmail.com
             </p>
             <p>
               <span className="spany">Twitter :</span>JoLinker@twitter

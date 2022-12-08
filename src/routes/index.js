@@ -5,8 +5,9 @@ import UserLayout from "../Views/Dshboard/Userdashboard";
 import JobCards from "../components/jobCard";
 import AdminChart from "../Views/Dshboard/AdminChart";
 import Adminroutes from "./admin";
+import ManageUser from "../Views/Dshboard/managerUsers";
+import JobSeeker from "../Views/Dshboard/jobSeekerDash";
 import DataTable from "../Views/Dshboard/managerUsers";
-import JobSeeker from "../Views/Dshboard/jobSeekerDash";   
 import Home from "../pages/Home";
 import Navbar from "../components/Navbar";
 import SignIn from "../components/Signin";
@@ -26,6 +27,7 @@ import UserAroutes from "./user";
 import User1routes from "./user1";
 import AboutUs from "../Views/aboutUs";
 import ContactUS from "../Views/contactUs";
+import Post from "../Views/Dshboard/Post"
 import JobMakerForm from "../components/Employer/JobMakerForm"
 
 import ManagPostedJobs from "../pages/ManagPostedJobs";
@@ -70,7 +72,7 @@ function App() {
       </Route>
 
       <Route element={<User1routes />}>
-        <Route path="/jobseeker" element={<JobSeeker />} />
+        <Route path="/Post" element={<Post />} />
       </Route>
 
       <Route>

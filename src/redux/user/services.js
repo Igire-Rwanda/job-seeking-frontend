@@ -8,3 +8,15 @@ export const CreateUserService = async (data) => {
     console.log("error: ", err);
   }
 };
+
+export const GetUserServices=async()=>{
+
+  try{
+    const res= await axios.get("http://localhost:4041/user");
+    return res
+
+  }catch(error){
+    console.log("error from get service "+error)
+
+  }
+}

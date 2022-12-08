@@ -68,14 +68,13 @@ const FormData = () => {
 
   useEffect(() => {
     if (user?.role === "Talent") {
+
       navigate("/");
     }
   }, [user])
   const login = () => {
     loginAction({ email, password })(dispatch)
   }
-
-
 
   return (
     <>

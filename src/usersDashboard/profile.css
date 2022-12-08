@@ -52,6 +52,16 @@
     border-radius: 15px;
     text-align: center;
  }
+
+ #mytitle{
+   margin-left: 440px;
+   margin-bottom: 40px;
+ }
+ .save{
+   color: antiquewhite;
+   margin: auto;
+ }
+
  /* span{
    margin-left: 500px;
  } */

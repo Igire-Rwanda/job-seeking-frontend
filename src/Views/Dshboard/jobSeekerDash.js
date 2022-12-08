@@ -13,6 +13,7 @@ import LaunchIcon from '@mui/icons-material/Launch';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import Divider from '@mui/material/Divider';
+import { NavLink } from "react-router-dom";
 const filterOptions = createFilterOptions({
   matchFrom: "start",
   stringify: (option) => option.title,
@@ -66,7 +67,7 @@ const JobSearching = () => {
             >
               <LaunchIcon />
             </h3>
-            <p>Applications</p>
+            <NavLink to="/applications"><Button><p>Applications</p></Button></NavLink>
           </div>
           <div className="cart">
             <h3

@@ -17,6 +17,7 @@ import Fiona from "../assets/Image/Capture.PNG";
 import {CreateUserAction} from '../redux/user/actions';
 import {useDispatch, useSelector} from "react-redux";
 import { useNavigate } from 'react-router-dom';
+
 // import LockOutlinedIcon from '@mui/material/LockOutlined'
 
 export default function SignUp() {
@@ -24,14 +25,29 @@ export default function SignUp() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
+      firstname: data.get('firstname'),
+      lastname: data.get('lastname'),
+      phone: data.get('phone'),
       email: data.get('email'),
+      username: data.get('username'),
       password: data.get('password'),
+      role: data.get('role'),
     });
   };
   const dispatch = useDispatch();
-  const {isFetching} = useSelector ((state)=> state?.user);
-  //const navigate = useNavigate();
-   
+
+  const {data,isFetching} = useSelector ((state)=> state?.user);
+
+    useEffect(()=>{
+     if(data){
+         navigate("/");
+     }
+    },[data])
+    const signup = () =>{
+      CreateUserAction({firstname,lastname,phone,email,username,password,role})(dispatch);
+     }
+  
+
   const [firstname,setFirstname]=useState()
   const [lastname,setLastname]=useState()
   const [phone,setPhone]=useState()
@@ -39,15 +55,12 @@ export default function SignUp() {
   const [username,setUname]=useState()
   const [password,setPassword]=useState()
   const [role,setRole]=useState()
-  //  const signup = () =>{
-  //   getAllUserAction({fullname,phone,email,username,password})(dispatch);
-  //  }
 
-  //  useEffect(()=>{
-  //   if(data){
-  //        navigate("/SignIn");
-  //   }
-  //  },[data])
+
+  const navigate = useNavigate();
+ 
+
+
   
 
 
@@ -72,7 +85,7 @@ export default function SignUp() {
           <Avatar sx={{ m: 1, bgcolor: 'primary' }}>
             {/* <LockOutlinedIcon /> */}
           </Avatar>
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" className='mt-5'  variant="h5">
             Sign up
           </Typography>
 
@@ -196,7 +209,9 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
+            
             <LoadingButton
+            
            // loading={isFetching}
               type="submit"
               fullWidth
@@ -205,11 +220,15 @@ export default function SignUp() {
               onClick={()=>{
                 console.log({firstname,lastname,phone,email,username,password})
                 CreateUserAction({firstname,lastname,phone,email,username,password})(dispatch) 
-               // signup();
+
+                navigate("/SignIn");
+
               }}
             >
              Create Account
+             
             </LoadingButton>
+           
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="./SignUp.js" variant="body2">

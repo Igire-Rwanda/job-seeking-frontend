@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import bgImg from '../img/picc.png'
@@ -8,10 +8,18 @@ import JobsList from './JobsList'
 import jobs from '../components/Assets/Jobs.json';
 import { link, NavLink } from 'react-router-dom'
 import '../Views/jobs2.css'
+import {useDispatch, useSelector} from "react-redux";
+import { getAllJobAction } from "../redux/job/action";
+
 
 
 const Home = ({ onClose }) => {
+  const dispatch = useDispatch();
+  const {jobs,isFetching} = useSelector((state)=> state.job);
 
+useEffect(() => {
+  getAllJobAction()(dispatch);
+}, []);
   const [job, setJob] = useState('')
 
   const getJob = (k) => {
@@ -45,7 +53,7 @@ const Home = ({ onClose }) => {
           </select>
           <span className='flex'> {job}</span>
 
-          <button className='btn'>Find Jobs</button>
+          <NavLink to='/jobseeker'><button className='btn'>Find Jobs</button></NavLink>
         </div>
 
 
@@ -67,7 +75,36 @@ const Home = ({ onClose }) => {
             <h6 className='ml-5'>Companies</h6></div>
         </div>
       </div>
-      <div className='JobsContent2'>
+      {jobs.map((jobu
+          )=>(
+        <div className="bg-white flex flex-col max-w-xl	ml-20 h-15 rounded-md pl-8 py-4 flex flex-row mb-5 p-20 ">
+         <h2>{jobu.jobTitle}</h2> 
+        <h3>{jobu.companyName}</h3> 
+        <h3> |{jobu. emplomentMode}</h3>
+        <h3> | Deadline: {jobu.jobDeadLine}</h3>
+        <p className=''>{jobu.jobDescription}</p>
+ {/* <h2>SENIOR DEVELOPER</h2>
+          <h3 className="text-s">Andela</h3>
+          <h3 className="text-s"> | Full Time</h3>
+          <h3 className="text-s"> | Deadline:2022-12-31</h3> */}
+<button className="bg-sky-500	rounded-md py-2 px-6 mt-8 w-36 text-white">Read More</button>
+
+        </div>
+                 
+                  
+                  ))}
+      {/* <div className="bg-white flex flex-col max-w-xl	ml-20 h-15 rounded-md pl-8 py-4 flex flex-row mb-5 p-20 ">
+          <h2>IT CONSLTANT </h2>
+          <h3 className="text-s">BK Thech</h3>
+          <h3 className="text-s"> | Remote</h3>
+
+          <h3 className="text-s"> | Full Time</h3>
+          <h3 className="mt-3"> It's not the secret that joLinker relies on technology to deliver million of packages everyday to it's customer.Everyday at a low cost.</h3>
+
+
+<button className="bg-sky-500	rounded-md py-2 px-6 mt-8 w-36 text-white">Read More</button>
+        </div> */}
+      {/* <div className='JobsContent2'>
 
         {jobs.map((data) => (
 
@@ -89,7 +126,7 @@ const Home = ({ onClose }) => {
           </div>
 
         ))}
-      </div><br />
+      </div><br /> */}
 
     </div>
 

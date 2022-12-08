@@ -1,8 +1,5 @@
 
-import React from 'react'
-import "./footer.css";
-// import footer.css from "components"
-// import { GitHubIcon, InstagramIcon, GoogleIcon, LinkedInIcon } from "/../../components/footer";
+import React from 'react';
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
@@ -58,7 +55,7 @@ const Footer = () => {
           <div className="copyright">
 
             <div className="copy-paragraph">
-              <p >Copyright@2022 joLinker Inc </p>
+              <p >Copyright@2022 JoLinker Inc </p>
             </div>
             <div class="icons">
               <h4>Follow Us On</h4>
@@ -67,6 +64,7 @@ const Footer = () => {
               <GoogleIcon />
               <LinkedInIcon /> */}
             </div>
+
           </div>
         </div>
       </div>

@@ -63,18 +63,18 @@ const FormData = () => {
   };
 
   const dispatch = useDispatch();
- const {token,isFetching} = useSelector((state)=>state?.auth);
+ const {user,isFetching} = useSelector((state)=>state?.auth);
 
    useEffect(()=>{
+
     if(token){
-      navigate("/EmployeeForm");
+    if(user?.role==="Talent"){
+      navigate("/");
     }
-  },[token])
+  },[user])
  const login=()=>{
   loginAction({email,password})(dispatch)
  }
-
-
 
   return (
     <>
@@ -91,7 +91,7 @@ const FormData = () => {
             <Card sx={{ height: 420, padding: 3 }}>
               <Stack spacing={4} alignItems="center" justifyContent="center">
                 <div className=" md:pl-0 pl-9 font-bold text-2xl cursor-pointer flex items-center font-[poppins] text-gray-800">
-                  <span className="text-teal-500 mr-1 ">joLinker</span>
+                  <span className="text-teal-500 mr-1 ">JoLinker</span>
                 </div>
 
                 <TextField
@@ -123,11 +123,12 @@ const FormData = () => {
                 loading={isFetching}
                   fullWidth
                   variant="contained"
-                  sx={{ mt: 3, mb: 2, bgcolor:"rgba(20, 161, 20, 0.658)" }}
+                  sx={{ mt: 3, mb: 2, bgcolor: "rgba(20, 161, 20, 0.658)" }}
                   onClick={() => {
+
+                    login();
                   console.log({email,password})
-                  login();
-                  }}
+                                }}
                 >
                   Signin
                 </LoadingButton>

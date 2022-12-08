@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   margin: 0;
   padding: 0;
@@ -28,23 +27,22 @@ Box{
   position: absolute;
 }
 .container{
-  background-color: rgb(97, 100, 100);
+  background-color: rgb(164, 165, 165);
   width: 55%;
-  height: 70%;
+  height: 120%;
   margin-left: 20%;
   margin-top: 2%;
   padding: 5%;
   border-radius:8px;
   position: absolute;
 }
-
 .box{
-  background-color: rgb(188, 211, 211);
+  background-color: rgb(221, 230, 230);
   width: 70%;
-  height: 50%;
+  height: 80%;
   margin-left: 15%;
   margin-top: 2%;
-  padding: 3% 1%;
+  padding: 3% 7%;
   border-radius:8px;
 }
 input{

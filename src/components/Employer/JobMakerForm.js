@@ -79,21 +79,20 @@ const jobCreate=()=>{
   return (
     <div className='container'>
 
-      
+      <>
         <h1> FORM APPLICATION</h1>
     <form onSubmit={handleSubmit}>
     
     <Box className='box'  
- 
-      component="form"
+
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '27ch' ,marginLeft: "80px"},
+        '& .MuiTextField-root': { m: 1, width: '27ch' ,marginLeft: "70px"},
       }}
       noValidate
       autoComplete="off"
     >
       <div>
-      <TextField
+      <TextField  
       id="outlined-basic"
   // helperText="Please enter your First name"
   name='companyLogo'
@@ -243,6 +242,7 @@ const jobCreate=()=>{
 </div>
     </Box>
     </form>
+    </>
     </div>
   );
 }

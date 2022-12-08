@@ -67,7 +67,6 @@ const FormData = () => {
 
    useEffect(()=>{
 
-    if(token){
     if(user?.role==="Talent"){
       navigate("/");
     }

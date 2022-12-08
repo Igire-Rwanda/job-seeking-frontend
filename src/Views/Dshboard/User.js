@@ -10,9 +10,9 @@ import Typography from '@mui/material/Typography';
 import View from './View';
 // import { useSelect } from '@mui/base';
 
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 
-// import { getAllProductAction } from '../../redux/product/actions';
+
 
 
 
@@ -71,55 +71,24 @@ export default function ManagPostedJobs() {
     "gender": "Female",
     "ip_address": "211.8.50.110"
   },
-{
-  key:"5",
-  // title:"Actions",
-  render:(record)=>{
-    return(
-      <>
-      <delete onClick ={()=>{
-onDelete (record)
-      }}
-      />
-        
-      </>
-    );
-  }
-}
+
 ]
   )
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   
-  // const { TableData, isFetching } = useSelector((state) => state.product)
+ 
   useEffect(() => {
-    // getAllProductAction()(dispatch);
+   
   }, []);
 
 const onAddNew = ()=>{
-  const randomNumber =parseInt(Math.random()+5);
-const addNew ={
-  id: randomNumber ,
-  name: "snow jon",
-  post: " Software Engineer",
-  date: "Jul 12th, 2021",
-  delete: "delete",
-  candidates: "View",
-  gender: "Female",
-  ip_address: "211.8.50.110"
+  
 }
-setTableData(pre=>{
-  return [...pre,addNew]
-})
-}
-const onDelete=(record)=>{
-  setTableData(pre=>{
-    pre.filter()
-  })
-}
+
 
   return (
     <div>

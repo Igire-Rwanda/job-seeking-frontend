@@ -1,5 +1,4 @@
 
-
 import React, {useEffect, useState} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -15,7 +14,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Fiona from "../assets/Image/Capture.PNG";
-import CreateUserAction from '../redux/user/actions';
+import {CreateUserAction} from '../redux/user/actions';
 import {useDispatch, useSelector} from "react-redux";
 import { useNavigate } from 'react-router-dom';
 // import LockOutlinedIcon from '@mui/material/LockOutlined'
@@ -228,4 +227,3 @@ export default function SignUp() {
 }
 
 const theme = createTheme();
-

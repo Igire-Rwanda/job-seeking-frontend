@@ -15,7 +15,7 @@ import {useDispatch,useSelector} from 'react-redux';
 import {CreateProfileAction} from "../redux/profile/action";
 import { useForm } from 'react-hook-form'
 import EditIcon from '@mui/icons-material/Edit';
-import { Navigate } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
 import { profileActions } from '../redux/profile';
 
 
@@ -204,7 +204,9 @@ loading={isFetching}
              }}
              
               >
-                <b>Save</b>
+                <NavLink to="/
+                
+                "><b>Save</b></NavLink>
             </LoadingButton>
             </div>
             {/* <div id="butto">

@@ -204,9 +204,7 @@ loading={isFetching}
              }}
              
               >
-                <NavLink to="/
-                
-                "><b>Save</b></NavLink>
+                <NavLink to="/"> <Button> <b>Save</b></Button></NavLink>
             </LoadingButton>
             </div>
             {/* <div id="butto">

@@ -36,14 +36,10 @@
   },
   "scripts": {
     "start": "node node_modules/react-scripts/scripts/start.js",
-    "build": "node node_modules/react-scripts/scripts/build.js",
+    "build": "react-scripts build && echo '/* /index.html 200'| cat >build/_redirects",
     "test": "node node_modules/react-scripts/scripts/test.js",
     "eject": "node node_modules/react-scripts/scripts/eject.js"
   },
- 
-    
-
-  
   "eslintConfig": {
     "extends": [
       "react-app",
